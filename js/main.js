@@ -99,6 +99,18 @@
 
         });
 
+        let heroTextSlider = new Swiper('.hero-text__slider', {
+
+            speed: 600,
+            spaceBetween: 0,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            observer: true,
+            observeParents: true,
+            touchEventsTarget: 'wrapper'
+
+        });
+
         let heroSlider = new Swiper('.hero-slider', {
 
             speed: 600,
@@ -109,8 +121,8 @@
             observeParents: true,
             touchEventsTarget: 'wrapper',
             navigation: {
-                prevEl: '.slider-arrow.slider-arrow__prev',
-                nextEl: '.slider-arrow.slider-arrow__next'
+                prevEl: '.slider-arrow.slider-arrow__prev.hero-arrow',
+                nextEl: '.slider-arrow.slider-arrow__next.hero-arrow'
             },
             pagination: {
                 el: '.hero-slider__wrapper .slider-count',
@@ -120,8 +132,12 @@
                             '<div class="slider-count__dec"></div>' +
                             '<div class="slider-count__total">' + addZero(total) + '</div>';
                 }
+            },
+            on: {
+                slideChange() {
+                    heroTextSlider.slideTo(this.realIndex);
+                },
             }
-
         });
 
         const worksSliders = document.querySelectorAll('.works-item__slider');
