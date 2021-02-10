@@ -1378,6 +1378,10 @@ textarea, input {
   overflow-y: hidden;
 }
 
+.card-info__main-hidden {
+  display: none;
+}
+
 .card-info__item {
   padding: 10px 0;
   display: -webkit-box;
@@ -1517,6 +1521,7 @@ textarea, input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 950px;
 }
 
 .specs-item:first-child {
@@ -1524,8 +1529,13 @@ textarea, input {
 }
 
 .specs-item__name {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.specs-item__value {
+  min-width: 175px;
 }
 
 .components {

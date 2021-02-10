@@ -249,22 +249,8 @@
         const tabsContent = document.querySelectorAll('.popular-body');
         const cardColors = document.querySelectorAll('.card-colors__item');
         const cardNumber = document.querySelector('.card-quantity__number');
-
-        //Смотреть больше в карточке товара
-
-        const cardItemsContainer = document.querySelector('.card-info__main');
-
-        let cardItemHeight,
-            numberOfCardItemsToDisplay = 4,
-            totalCardItemsHeight;
-
-        if (cardItemsContainer) {
-
-            cardItemHeight = document.querySelector('.card-info__item').clientHeight;
-            totalCardItemsHeight = cardItemHeight * numberOfCardItemsToDisplay;
-            cardItemsContainer.style.maxHeight = totalCardItemsHeight + 'px';
-
-        }
+        const cardInfoMainHidden = document.querySelector('.card-info__main-hidden');
+        const cardInfoBtn = document.querySelector('.card-info__btn');
 
         const contactsColumn = document.querySelectorAll('.contacts-column');
 
@@ -355,20 +341,24 @@
             }
 
             if (target.matches('.card-info__btn')) {
-            
-                cardItemContainer = $('.card-info__main');
-                
-                minimumHeight = totalCardItemsHeight;
-                
-                currentHeight = cardItemContainer.outerHeight();
-                
-                autoHeight = cardItemContainer.css('max-height', '100%').outerHeight();
-                
-                cardItemContainer.css('height', currentHeight).animate({
-                    height: autoHeight
-                });
-                
-                document.querySelector('.card-info__btn').style.display = 'none';
+
+                if (cardInfoMainHidden.classList.contains('active')) {
+
+                    cardInfoMainHidden.classList.remove('active');
+
+                    $('.card-info__main-hidden').slideUp();
+
+                    cardInfoBtn.textContent = 'Смотреть больше';
+
+                } else {
+
+                    cardInfoMainHidden.classList.add('active');
+
+                    $('.card-info__main-hidden').slideDown();
+
+                    cardInfoBtn.textContent = 'Убрать';
+
+                }
     
             }
             
