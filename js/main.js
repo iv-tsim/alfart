@@ -56,6 +56,7 @@
                 slidesPerGroup: 4,
                 observer: true,
                 observeParents: true,
+                touchEventsTarget: 'wrapper',
                 navigation: {
                     prevEl: '.slider-arrow.slider-arrow__prev.slider-arrow_' + index,
                     nextEl: '.slider-arrow.slider-arrow__next.slider-arrow_' + index
@@ -81,6 +82,7 @@
             slidesPerGroup: 4,
             observer: true,
             observeParents: true,
+            touchEventsTarget: 'wrapper',
             navigation: {
                 prevEl: '.slider-arrow.slider-arrow__prev',
                 nextEl: '.slider-arrow.slider-arrow__next'
@@ -105,6 +107,7 @@
             slidesPerGroup: 1,
             observer: true,
             observeParents: true,
+            touchEventsTarget: 'wrapper',
             navigation: {
                 prevEl: '.slider-arrow.slider-arrow__prev',
                 nextEl: '.slider-arrow.slider-arrow__next'
@@ -161,8 +164,10 @@
             speed: 600,
             spaceBetween: 10,
             slidesPerView: 2,
+            slidesPerGroup: 2,
             observer: true,
             observeParents: true,
+            touchEventsTarget: 'wrapper',
             loop: true,
             navigation: {
                 prevEl: '.slider-arrow.slider-arrow__prev',
@@ -214,6 +219,31 @@
             });
 
         }); 
+
+        let blogCardSlider = new Swiper('.blogCard-slider', {
+
+            speed: 600,
+            spaceBetween: 40,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            observer: true,
+            touchEventsTarget: 'wrapper',
+            observeParents: true,
+            navigation: {
+                prevEl: '.slider-arrow.slider-arrow__prev',
+                nextEl: '.slider-arrow.slider-arrow__next'
+            },
+            pagination: {
+                el: '.slider-count',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    return '<div class="slider-count__current">' + addZero(current) + '</div>' +
+                            '<div class="slider-count__dec"></div>' +
+                            '<div class="slider-count__total">' + addZero(total) + '</div>';
+                }
+            }
+
+        });
 
         const tabs = document.querySelectorAll('.popular-tab');
         const tabsContent = document.querySelectorAll('.popular-body');

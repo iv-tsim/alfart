@@ -1,0 +1,41 @@
+.blogCard
+    &-diff
+        padding-bottom: 80px
+        p
+            margin-bottom: 20px
+            font-size: 20px
+        &__container
+            padding: 0 130px 0 130px
+        &__title
+            margin-bottom: 80px
+        &__main
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            width: calc(100% + 20px)
+            margin-left: -10px
+            margin-bottom: 20px
+        &__item
+            flex-basis: 50%
+            margin: 0 10px
+            &-title
+                margin-bottom: 30px
+            &-text
+                font-size: 20px
+                list-style-type: none
+                counter-reset: section
+                li
+                    margin-bottom: 10px
+                    padding-left: 20px
+                    position: relative
+                    &:last-child
+                        margin-bottom: 0
+                    &:nth-child(n + 10)
+                        padding-left: 30px
+                    &::before
+                        position: absolute
+                        left: 0
+                        top: 0
+                        display: block
+                        counter-increment: section
+                        content: counter(section) "."
