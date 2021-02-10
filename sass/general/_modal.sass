@@ -1,0 +1,101 @@
+.policy
+    background: $smalt
+    font-size: 16px
+    color: #fff
+    &-wrapper
+        display: none
+        width: 1000px
+        max-width: 90%
+    &-wrapper.fancybox-content
+        padding: 25px
+    &-title
+        font-weight: 700
+        font-size: 24px
+        margin-bottom: 30px
+    &-text
+        margin-bottom: 15px
+    &-list
+        list-style: none
+        &__item
+            font-size: 16px
+            padding-left: 20px
+            margin-bottom: 12px
+            position: relative
+            &::before
+                position: absolute
+                left: 10px
+                top: 7px
+                display: block
+                content: ''
+                width: 3px
+                height: 3px
+                background-color: $flushOrange
+                border-radius: 100%
+            &:last-child
+                margin-bottom: 0
+
+.modal
+    position: relative
+    background-color: $smalt
+    color: #fff
+    padding: 110px 75px 120px 75px
+    &-wrapper
+        display: none
+        width: 100%
+        max-width: 600px
+    &-wrapper.fancybox-content
+        padding: 0
+    &-title
+        text-align: center
+        margin-bottom: 40px
+    &-name
+        padding-left: 40px
+        font-weight: 700
+        text-transform: uppercase
+        margin-bottom: 10px
+    &-input
+        margin-bottom: 30px
+        width: 100%
+    &-policy
+        display: flex
+        margin-top: 45px
+        align-items: center
+        margin-bottom: 25px
+        &__img
+            margin-right: 20px
+        &__text
+            font-size: 14px
+            a
+                color: #fff
+    &-submit
+        width: 100%
+    &-close
+        position: absolute
+        top: 0
+        right: 0
+        width: 75px
+        height: 75px
+        border-left: 1px solid #fff
+        border-bottom: 1px solid #fff
+        display: flex
+        align-items: center
+        justify-content: center
+    
+
+@media (max-width: 600px)
+    .modal
+        &-wrapper
+            max-width: 320px
+    .policy
+        font-size: 15px
+        &-title
+            margin-bottom: 15px
+            font-size: 20px
+        &-list
+            &__item
+                font-size: 15px
+                padding-left: 15px
+                &::before
+                    left: 9px
+        &-wrapper.fancybox-content
+            padding: 20px

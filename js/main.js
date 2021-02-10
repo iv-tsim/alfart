@@ -377,6 +377,24 @@
                 }
     
             }
+
+            if (target.closest('.item-favourite')) {
+
+                let heart = target.closest('.item-favourite');
+
+                event.preventDefault();
+
+                if (heart.classList.contains('active')) {
+
+                    heart.classList.remove('active');
+
+                } else {
+
+                    heart.classList.add('active');
+
+                }
+
+            }
             
         });
 
