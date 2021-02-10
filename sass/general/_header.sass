@@ -1,0 +1,54 @@
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: #fff
+    &-nav
+        margin: 0 20px
+        flex-wrap: wrap
+        &__item
+            font-weight: 500
+            color: #000
+            margin-right: 45px
+            transition: .3s color
+            &:hover
+                color: $flushOrange
+            &:last-child
+                margin-right: 0
+    &-phone
+        color: #000
+        font-weight: 900
+        font-size: 20px
+    &-buttons
+        display: flex
+    &-favourite, &-cart
+        height: 91px
+        width: 91px
+        position: relative
+        svg
+            width: 35px
+        &:hover
+            .header-cart__count
+                color: #ffffff
+    &-cart
+        &__count
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            top: 12px
+            font-size: 14px
+            color: $flushOrange
+            transition: .3s color
+        &__count[data-count="0"]
+            display: none
+    &-index
+        background-color: transparent
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 2
+        .header-nav__item
+            color: #ffffff
+        .header-phone
+            color: #ffffff

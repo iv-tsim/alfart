@@ -1,0 +1,33 @@
+.catalog
+    &-list
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 40px)
+        margin-left: -20px
+        &__item
+            margin: 0 20px 40px 20px
+            flex-basis: 370px
+            flex-grow: 1
+    &-menu
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        flex-wrap: wrap
+        margin-bottom: 70px
+        &__item
+            font-weight: 700
+            padding: 18px 30px
+            text-transform: uppercase
+            cursor: pointer
+            margin-right: 10px
+            margin-bottom: 10px
+            border: 1px solid transparent
+            transition: .3s border-color
+            flex-wrap: wrap
+            color: #000
+            &:last-child
+                margin-right: 0
+            &:hover
+                border-color: $flushOrange
+        &__item.active
+            border-color: $flushOrange

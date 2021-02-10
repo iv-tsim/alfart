@@ -1,0 +1,63 @@
+.hero
+    background-color: $smalt
+    display: flex
+    &-wrapper
+        position: relative
+    &-text, &-slider__wrapper
+        width: 50%
+    &-text
+        padding-left: calc((100% - 1270px) / 2)
+        padding-right: 130px
+        padding-bottom: 530px
+        padding-top: 160px
+        color: #fff
+        &__title
+            font-weight: 700
+            font-size: 50px
+            margin-bottom: 45px
+        &__subtitle
+            font-weight: 400
+            font-size: 24px
+            margin-bottom: 45px
+    &-slider
+        height: 100%
+        &__wrapper
+            position: relative
+        &__item
+            background-repeat: no-repeat
+            background-position: center right
+            background-size: cover
+            height: 100%
+            width: 100%
+            pointer-events: none
+        &__bottom
+            position: absolute
+            left: -20px
+            top: 190px
+            flex-direction: column
+            transform: translateX(-100%)
+            justify-content: center
+            .slider-count
+                flex-direction: column
+                margin-right: 0
+                margin-bottom: 45px
+                &__dec
+                    height: 90px
+                    width: 1px
+                    margin: 17px 0
+                    background-color: rgba(255,255,255, .3)
+                &__current
+                    color: #fff
+                &__total
+                    color: rgba(255,255,255, .3)
+            .slider-arrows
+                flex-direction: column-reverse
+                .slider-arrow__prev
+                    margin-right: 0
+                    margin-top: 20px
+                .slider-arrow
+                    svg
+                        fill: #fff
+                .slider-arrow.swiper-button-disabled
+                    svg
+                        fill: rgba(255,255,255, .3)

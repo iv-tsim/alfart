@@ -1,0 +1,33 @@
+.popular
+    padding-bottom: 145px
+    &-title
+        margin-bottom: 100px
+    &-top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 75px
+    &-tabs
+        display: flex
+        flex-wrap: wrap
+        margin-right: 20px
+    &-tab
+        font-weight: 700
+        padding: 18px 30px
+        text-transform: uppercase
+        cursor: pointer
+        margin-right: 10px
+        border: 1px solid transparent
+        transition: .3s border-color
+        &:last-child
+            margin-right: 0
+        &:hover
+            border-color: $flushOrange
+    &-tab.active
+        border-color: $flushOrange
+    &-bottom
+        margin-top: 90px
+    &-body
+        display: none
+    &-body.active
+        display: block

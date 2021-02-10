@@ -1,0 +1,131 @@
+.card
+    &-main
+        &__wrapper
+            display: flex
+            justify-content: space-between
+            padding-bottom: 90px
+            align-items: flex-start
+    &-photos
+        flex-basis: 58.33%
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+        width: calc(58.33% + 10px)
+        margin-left: -5px
+        &__item
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+            margin: 0 5px 10px 5px
+            flex-basis: 320px
+            flex-grow: 1
+            position: relative
+            display: flex
+            &-dec
+                opacity: 0
+                visibility: hidden
+                position: absolute
+                top: 50%
+                left: 50%
+                width: 100px
+                height: 100px
+                transform: translate(-50%, -50%)
+                background-color: $flushOrange
+                display: flex
+                align-items: center
+                justify-content: center
+                transition: .3s opacity, .3s visibility
+                z-index: 1
+                &__img
+                    width: 40%
+            &-inner
+                display: block
+                width: 100%
+                opacity: 0
+                visibility: hidden
+            &:hover
+                .card-photos__item-dec
+                    opacity: 1
+                    visibility: visible
+    &-main
+        flex-basis: 33.33%
+    &-title
+        margin-bottom: 35px
+    &-info
+        margin-bottom: 50px
+        &__main
+            overflow-y: hidden
+        &__item
+            padding: 10px 0
+            display: flex
+            border-top: 1px solid $alto
+            &:first-child
+                border-top: none
+            &-name, &-value
+                flex-basis: 50%
+        &__btn
+            cursor: pointer
+            display: inline-block
+            color: $flushOrange
+            margin-top: 10px
+            &::after
+                background-color: $flushOrange
+    &-colors
+        display: flex
+        flex-wrap: wrap
+        width: calc(100% + 34px)
+        margin-left: -17px
+        margin-bottom: 50px
+        &__item
+            flex-basis: 50px
+            flex-grow: 1
+            margin: 0 17px 18px 17px
+            position: relative
+            cursor: pointer
+            &::after
+                position: absolute
+                display: block
+                content: ''
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 132%
+                height: 132%
+                opacity: 0
+                visibility: hidden
+                transition: .3s opacity, .3s visibility
+                border: 1px solid $flushOrange
+            &:hover
+                &::after
+                    opacity: 1
+                    visibility: visible
+            &-inner
+                width: 100%
+                display: block
+                opacity: 0
+                visibility: hidden
+        &__item.active::after
+            opacity: 1
+            visibility: visible
+    &-name
+        margin-bottom: 15px
+    &-quantity
+        display: inline-flex
+        padding: 13px
+        background-color: #fff
+        margin-bottom: 50px
+        &__number
+            margin: 0 28px
+        &__img
+            cursor: pointer
+    &-price
+        font-size: 20px
+        margin-bottom: 50px
+        &__number
+            font-weight: 700
+            font-size: 36px
+    &-btns
+        display: flex
+        &__item
+            &:first-child
+                margin-right: 20px

@@ -1,0 +1,28 @@
+.slider
+    &-bottom
+        display: flex
+        align-items: center
+    &-count
+        display: flex
+        align-items: center
+        margin-right: 120px
+        width: auto
+        &__dec
+            width: 90px
+            height: 1px
+            background-color: $dustyGray
+            margin: 0 30px
+        &__total
+            color: $dustyGray
+    &-arrows
+        display: flex
+    &-arrow
+        cursor: pointer
+        svg
+            height: 16px
+            fill: #000000
+        &__prev
+            margin-right: 30px
+    &-arrow.swiper-button-disabled
+        svg
+            fill: $dustyGray

@@ -1,0 +1,100 @@
+.footer
+    background-color: $smalt
+    display: flex
+    color: #ffffff
+    &-left, &-right
+        flex-basis: 50%
+    &-left
+        padding-top: 100px
+        padding-bottom: 120px
+        padding-left: calc((100% - 1600px) / 2)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &-logo
+        margin-bottom: 110px
+    &-phone
+        color: #ffffff
+        font-size: 24px
+        font-weight: 900
+        margin-bottom: 50px
+    &-address
+        font-size: 20px
+        margin-bottom: 50px
+        max-width: 460px
+    &-email
+        font-size: 14px
+        font-weight: 500
+        color: #ffffff
+        margin-bottom: 170px
+    &-socials
+        display: flex
+        &__item
+            font-size: 20px
+            color: #ffffff
+            position: relative
+            padding-right: 85px
+            margin-right: 35px
+            transition: .3s color
+            &:hover
+                color: $flushOrange
+            &:last-child
+                margin-right: 35px
+                padding-right: 0
+                &::after
+                    display: none
+            &::after
+                position: absolute
+                content: ''
+                display: block
+                top: 50%
+                right: 0px
+                width: 50px
+                height: 1px
+                background-color: #fff
+    &-right
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &-map
+        flex-basis: 50%
+        width: 100%
+    &-special
+        flex-basis: 50%
+        padding-left: 160px
+        padding-right: calc((100% - 1600px) / 2)
+        padding-top: 70px
+        padding-bottom: 35px
+        background-color: $resolutionBlue
+    &-nav
+        margin-right: 170px
+        display: flex
+        flex-direction: column
+        &:last-child
+            margin-right: 0
+        &__item
+            color: #ffffff
+            margin-bottom: 20px
+            transition: .3s color
+            &:hover
+                color: $flushOrange
+        &__wrapper
+            display: flex
+            margin-bottom: 90px
+    &-bottom
+        display: flex
+    &-copyright
+        font-size: 12px
+        margin-right: 127px
+        a
+            color: #ffffff
+            transition: .3s color
+            &:hover
+                color: $flushOrange
+    &-policy
+        font-size: 10px
+        &__link
+            color: #ffffff
+            transition: .3s color
+            &:hover
+                color: $flushOrange

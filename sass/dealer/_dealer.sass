@@ -1,0 +1,29 @@
+.dealer
+    display: flex
+    flex-wrap: wrap
+    width: calc(100% + 40px)
+    margin-left: -20px
+    padding-bottom: 120px
+    &-item
+        flex-basis: 350px
+        margin: 0 20px 40px 20px
+        flex-grow: 1
+        padding: 50px 50px 60px 50px
+        background-color: transparent
+        transition: .3s background-color
+        &:hover
+            background-color: #fff
+        &__title
+            font-weight: 700
+            font-size: 24px
+            margin-bottom: 40px
+        &__address
+            margin-bottom: 10px
+        &__phone
+            color: #000
+            font-weight: 700
+            margin-bottom: 10px
+        &__btn
+            color: $flushOrange
+            font-weight: 700
+            cursor: pointer
