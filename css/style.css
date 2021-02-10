@@ -163,6 +163,10 @@ textarea, input {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+.btn_blueText {
+  color: #00339B;
+}
+
 .title {
   font-weight: 700;
   font-size: 42px;
@@ -914,6 +918,10 @@ textarea, input {
   padding: 0;
 }
 
+.modal-wrapper.fancybox-content button.fancybox-close-small {
+  display: none;
+}
+
 .modal-title {
   text-align: center;
   margin-bottom: 40px;
@@ -975,6 +983,29 @@ textarea, input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
+}
+
+.modal-close_orange {
+  background-color: #FF7F00;
+}
+
+.modal-btn {
+  width: 100%;
+}
+
+.modal .btn_white {
+  margin-bottom: 40px;
+}
+
+.modal-map {
+  padding: 20px;
+  position: relative;
+}
+
+.modal-map__wrapper {
+  max-width: 940px;
+  height: 640px;
 }
 
 @media (max-width: 600px) {
@@ -1005,6 +1036,7 @@ textarea, input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .hero-wrapper {
@@ -1033,6 +1065,23 @@ textarea, input {
   font-weight: 400;
   font-size: 24px;
   margin-bottom: 45px;
+}
+
+.hero-dec {
+  font-weight: 900;
+  font-size: 440px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: -20px;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
 }
 
 .hero-slider {
@@ -2056,6 +2105,16 @@ textarea, input {
   background-color: transparent;
   -webkit-transition: .3s background-color;
   transition: .3s background-color;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .dealer-item:hover {
@@ -2082,6 +2141,16 @@ textarea, input {
   color: #FF7F00;
   font-weight: 700;
   cursor: pointer;
+  -webkit-transition: .3s color;
+  transition: .3s color;
+}
+
+.dealer-item__btn:hover {
+  color: #FF9021;
+}
+
+.dealer #mapData {
+  display: none;
 }
 
 .collab {

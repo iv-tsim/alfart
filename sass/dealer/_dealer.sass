@@ -11,6 +11,9 @@
         padding: 50px 50px 60px 50px
         background-color: transparent
         transition: .3s background-color
+        display: flex
+        flex-direction: column
+        align-items: flex-start
         &:hover
             background-color: #fff
         &__title
@@ -27,3 +30,8 @@
             color: $flushOrange
             font-weight: 700
             cursor: pointer
+            transition: .3s color
+            &:hover
+                color: $treePoppy
+    #mapData
+        display: none

@@ -1,6 +1,7 @@
 .hero
     background-color: $smalt
     display: flex
+    position: relative
     &-wrapper
         position: relative
     &-text, &-slider__wrapper
@@ -19,6 +20,21 @@
             font-weight: 400
             font-size: 24px
             margin-bottom: 45px
+    &-dec
+        font-weight: 900
+        font-size: 440px
+        text-transform: uppercase
+        position: absolute
+        bottom: -20px
+        z-index: 1
+        width: 100%
+        text-align: center
+        background-attachment: fixed
+        background-repeat: no-repeat
+        background-position: center center
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        pointer-events: none
     &-slider
         height: 100%
         &__wrapper

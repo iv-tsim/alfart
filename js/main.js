@@ -435,6 +435,73 @@
             });
         }
 
+        const mapElements = document.querySelectorAll('.dealer-item');
+
+        if (document.querySelector('div#modalMap')) {
+            ymaps.ready(function () {
+
+                let mapData = JSON.parse(document.getElementById('mapData').textContent);
+
+                var myMap = new ymaps.Map('map', {
+                    center: [59.20815280167776,39.88709988737485],
+                    zoom: 12
+                });
+
+                var objectManager = new ymaps.ObjectManager({
+                    clusterize: true,
+                    gridSize: 32
+                });
+
+                objectManager.objects.options
+                    .set('preset', 'islands#redIcon')
+                    .set('iconLayout', 'default#image')
+                    .set('iconImageHref', '../img/general/mark.svg')
+                    .set('iconImageSize', [23, 37])
+                    .set('iconImageOffset'), [0, 0];
+    
+                myMap.geoObjects.add(objectManager);
+
+                objectManager.add(mapData);
+    
+                myMap.controls
+                    .remove('geolocationControl')
+                    .remove('fullscreenControl')
+                    .remove('typeSelector')
+                    .remove('searchControl')
+                    .remove('trafficControl')
+                    .remove('rulerControl')
+                    .remove('zoomControl');
+    
+                myMap.behaviors.disable([
+                    'scrollZoom',
+                    'dblClickZoom'
+                ]);
+
+                document.querySelectorAll('.dealer-item__btn').forEach(function(item) {
+
+                    item.addEventListener('click', function(event) {
+
+                        let target = event.target.closest('.dealer-item');
+
+                        mapElements.forEach(function(item, index) {
+
+                            if (item === target) {
+
+                                myMap.container.fitToViewport()
+        
+                                myMap.setCenter(mapData.features[index].geometry.coordinates, 14);
+        
+                            }
+        
+                        });
+
+                    });
+
+                });
+
+            });
+        }
+
     });
 
 })();
