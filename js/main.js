@@ -131,11 +131,71 @@
 
             item.closest('.swiper-container').querySelectorAll('.slider-arrow').forEach(function(item) {item.classList.add('slider-arrow_' + index)});
 
-            let popularSlider = new Swiper('.' + name, {
+            let worksSlider = new Swiper('.' + name, {
                 speed: 600,
                 spaceBetween: 40,
                 slidesPerView: 1,
                 slidesPerGroup: 1,
+                touchEventsTarget: 'wrapper',
+                observer: true,
+                observeParents: true,
+                navigation: {
+                    prevEl: '.slider-arrow.slider-arrow__prev.slider-arrow_' + index,
+                    nextEl: '.slider-arrow.slider-arrow__next.slider-arrow_' + index
+                },
+                pagination: {
+                    el: '.slider-count',
+                    type: 'custom',
+                    renderCustom: function (swiper, current, total) {
+                        return '<div class="slider-count__current">' + addZero(current) + '</div>' +
+                                '<div class="slider-count__dec"></div>' +
+                                '<div class="slider-count__total">' + addZero(total) + '</div>';
+                    }
+                }
+            });
+
+        }); 
+
+        let workSlider = new Swiper('.work-slider', {
+
+            speed: 600,
+            spaceBetween: 10,
+            slidesPerView: 2,
+            observer: true,
+            observeParents: true,
+            loop: true,
+            navigation: {
+                prevEl: '.slider-arrow.slider-arrow__prev',
+                nextEl: '.slider-arrow.slider-arrow__next'
+            },
+            pagination: {
+                el: '.slider-count',
+                type: 'custom',
+                renderCustom: function (swiper, current, total) {
+                    return '<div class="slider-count__current">' + addZero(current) + '</div>' +
+                            '<div class="slider-count__dec"></div>' +
+                            '<div class="slider-count__total">' + addZero(total) + '</div>';
+                }
+            }
+
+        });
+
+        const usageSliders = document.querySelectorAll('.usage-info__slider');
+
+        usageSliders.forEach(function(item, index) {
+
+            let name = 'usage-info__slider_' + index;
+
+            item.classList.add(name);
+
+            item.closest('.swiper-container').querySelectorAll('.slider-arrow').forEach(function(item) {item.classList.add('slider-arrow_' + index)});
+
+            let usageSlider = new Swiper('.' + name, {
+                speed: 600,
+                spaceBetween: 40,
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                touchEventsTarget: 'wrapper',
                 observer: true,
                 observeParents: true,
                 navigation: {

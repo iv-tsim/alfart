@@ -114,12 +114,19 @@ textarea, input
         background-color: #000000
         &:hover
             background-color: $mineShaft
+    &_white
+        background-color: #fff
+        color: $flushOrange
+        &:hover
+            background-color: rgba(255, 255, 255, 0.7)
 
 .title
     font-weight: 700
     font-size: 42px
     &_small
         font-size: 36px
+    &_reallySmall
+        font-size: 24px
 
 .page
     &-title
@@ -193,6 +200,16 @@ textarea, input
 // Файлы, относящиеся к нашим работам
 
 @import ./works/_works.sass
+
+// Файлы, относящиеся к карточке работы
+
+@import ./work/_work-slider.sass
+@import ./work/_work-info.sass
+@import ./work/_work-another.sass
+
+// Файлы, относящиеся к применению
+
+@import ./usage/_usage.sass
 
 
 .alertify-notifier .ajs-message.ajs-warning

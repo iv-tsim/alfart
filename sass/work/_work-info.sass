@@ -1,0 +1,23 @@
+.work
+    &-info
+        background-color: #fff
+        position: relative
+        margin-bottom: 100px
+        &::before
+            position: absolute
+            content: ''
+            display: block
+            height: 100%
+            width: calc((100% - 1600px) / 2)
+            left: 0
+            top: 0
+            background-color: $mercury
+        &__container
+            padding: 100px 130px 130px 130px
+        &__title
+            margin-bottom: 35px
+        &__text
+            font-size: 20px
+            margin-bottom: 50px
+            &:last-child
+                margin-bottom: 0
