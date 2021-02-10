@@ -1008,6 +1008,10 @@ textarea, input {
   height: 640px;
 }
 
+.modal-map__content {
+  height: 600px;
+}
+
 @media (max-width: 600px) {
   .modal-wrapper {
     max-width: 320px;

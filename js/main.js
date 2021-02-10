@@ -442,7 +442,7 @@
 
                 let mapData = JSON.parse(document.getElementById('mapData').textContent);
 
-                var myMap = new ymaps.Map('map', {
+                var myMap = new ymaps.Map('modalMap', {
                     center: [59.20815280167776,39.88709988737485],
                     zoom: 12
                 });
@@ -469,8 +469,8 @@
                     .remove('typeSelector')
                     .remove('searchControl')
                     .remove('trafficControl')
-                    .remove('rulerControl')
-                    .remove('zoomControl');
+                    .remove('rulerControl');
+                    // .remove('zoomControl');
     
                 myMap.behaviors.disable([
                     'scrollZoom',
@@ -480,24 +480,28 @@
                 document.querySelectorAll('.dealer-item__btn').forEach(function(item) {
 
                     item.addEventListener('click', function(event) {
-
+    
                         let target = event.target.closest('.dealer-item');
-
+    
                         mapElements.forEach(function(item, index) {
-
+                            
                             if (item === target) {
+    
+                                setTimeout(function() {
 
-                                myMap.container.fitToViewport()
+                                    myMap.container.fitToViewport();
+
+                                }, 20);
         
                                 myMap.setCenter(mapData.features[index].geometry.coordinates, 14);
         
                             }
         
                         });
-
+    
                     });
-
-                });
+    
+                }); 
 
             });
         }
