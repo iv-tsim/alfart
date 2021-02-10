@@ -2,6 +2,18 @@
     .usage
         &:last-child
             margin-bottom: 150px
+        &:nth-child(odd)
+            flex-direction: row-reverse
+            .usage
+                &-info
+                    padding-right: 0
+                    padding-left: 20px
+                    &__slider
+                        &-bottom
+                            justify-content: flex-end
+                &-main
+                    margin-right: 0
+                    margin-left: 40px
     
 .usage
     display: flex
@@ -70,5 +82,5 @@
                     display: block
                     opacity: 0
                     visibility: hidden
-            &__bottom
+            &-bottom
                 margin-top: 50px
