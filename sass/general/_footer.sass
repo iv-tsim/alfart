@@ -39,7 +39,7 @@
             &:hover
                 color: $flushOrange
             &:last-child
-                margin-right: 35px
+                margin-right: 0
                 padding-right: 0
                 &::after
                     display: none
@@ -61,8 +61,8 @@
         width: 100%
     &-special
         flex-basis: 50%
-        padding-left: 160px
-        padding-right: calc((100% - 1600px) / 2)
+        padding-left: calc(100% - 800px)
+        padding-right: calc(100% - 800px)
         padding-top: 70px
         padding-bottom: 35px
         background-color: $resolutionBlue
@@ -98,3 +98,93 @@
             transition: .3s color
             &:hover
                 color: $flushOrange
+
+@media (max-width: 1630px)
+    .footer 
+        &-left
+            padding-left: 15px
+            padding-top: 80px
+            padding-bottom: 100px
+        &-special
+            padding-top: 50px
+            padding-left: 15px
+            padding-right: 15px
+        &-nav
+            &__wrapper
+                margin-bottom: 70px
+
+@media (max-width: 1250px)
+    .footer
+        &-nav
+            margin-right: 100px
+        &-copyright
+            margin-right: 57px
+
+@media (max-width: 1120px)
+    .footer
+        flex-direction: column
+        &-left
+            padding: 40px 15px 20px 15px
+            align-items: center
+        &-logo
+            margin-bottom: 30px
+        &-address
+            text-align: center
+            margin-bottom: 20px
+        &-phone
+            margin-bottom: 30px
+        &-email
+            margin-bottom: 25px
+        &-socials
+            &__item
+                margin-right: 20px
+                padding-right: 50px
+                &::after
+                    width: 30px
+        &-map
+            height: 250px
+            flex-basis: auto
+        &-special
+            padding: 15px 15px 20px 15px
+        &-nav
+            margin: 0 15px
+            &:last-child
+                margin-right: 15px
+            &__wrapper
+                width: calc(100% + 30px)
+                margin-left: -15px
+                margin-bottom: 20px
+                justify-content: center
+        &-bottom
+            flex-direction: column
+            align-items: center
+            text-align: center
+        &-copyright
+            margin-right: 0
+            margin-bottom: 10px
+
+@media (max-width: 500px)
+    .footer
+        &-left
+            padding-top: 30px
+        &-logo
+            padding: 16px 20px 20px 20px
+            margin-bottom: 20px
+            &__img
+                width: 130px
+        &-phone
+            margin-bottom: 20px
+        &-address
+            font-size: 18px
+        &-socials
+            &__item
+                font-size: 18px
+                margin-right: 15px
+                padding-right: 45px
+                &::after
+                    width: 25px
+        &-email
+            margin-bottom: 20px
+        &-nav
+            &__wrapper
+                margin-bottom: 10px
