@@ -50,3 +50,78 @@
             font-size: 14px
             a
                 color: #ffffff
+
+@media (max-width: 1300px)
+    .app
+        padding: 90px 0
+        &-form
+            max-width: 750px
+            &__top
+                margin-bottom: 30px
+        &-subtitle
+            margin-bottom: 70px
+        &-bottom
+            margin-top: 40px
+
+@media (max-width: 1000px)
+    .app
+        padding: 60px 0
+        &-subtitle
+            margin-bottom: 50px
+        &-item
+            &__textarea
+                min-height: 250px
+
+@media (max-width: 800px)
+    .app
+        padding: 40px 0
+        &-subtitle
+            margin-bottom: 30px
+        &-item
+            &__title
+                font-size: 15px
+                padding-left: 30px
+            &__textarea
+                min-height: 220px
+        &-bottom
+            margin-top: 30px
+
+@media (max-width: 600px)
+    .app
+        padding: 30px 0
+        &-subtitle
+            font-size: 18px
+            margin-bottom: 20px
+        &-item
+            &__input
+                &::-webkit-input-placeholder
+                    font-size: 18px
+        &-form
+            &__top
+                margin-bottom: 0
+                flex-direction: column
+                .app-item
+                    width: 100%
+                    margin-bottom: 15px
+        &-bottom
+            margin-top: 20px
+            flex-direction: column-reverse
+        &-policy
+            margin-right: 0
+        &-btn
+            margin-bottom: 15px
+
+@media (max-width: 450px)
+    .app
+        &-btn
+            width: 100%
+
+@media (max-width: 390px)
+    .app
+        &-item
+            &__title
+                font-size: 14px
+                padding-left: 20px
+        &-policy
+            &__text
+                font-size: 12px
