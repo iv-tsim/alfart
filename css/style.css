@@ -268,6 +268,24 @@ textarea, input {
   }
 }
 
+@-webkit-keyframes text {
+  0% {
+    background-position: calc(50% + 46px) calc(50% - 20px);
+  }
+  100% {
+    background-position: calc(50% - 40px) calc(50% + 60px);
+  }
+}
+
+@keyframes text {
+  0% {
+    background-position: calc(50% + 46px) calc(50% - 20px);
+  }
+  100% {
+    background-position: calc(50% - 40px) calc(50% + 60px);
+  }
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1136,7 +1154,7 @@ textarea, input {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: calc(50% - 40px) calc(50% + 60px);
+  background-position: calc(50% + 46px) calc(50% - 20px);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   pointer-events: none;
@@ -1146,6 +1164,19 @@ textarea, input {
   width: 100%;
   -webkit-transition: .6s background-image;
   transition: .6s background-image;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.hero-dec.active {
+  -webkit-animation-name: text;
+          animation-name: text;
 }
 
 .hero-slider {

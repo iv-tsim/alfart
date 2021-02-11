@@ -138,12 +138,22 @@
                 }
             },
             on: {
+                afterInit() {
+
+                    heroDec.classList.add('active');
+
+                },
                 slideChange() {
 
-                    console.log(heroDec.dataset['img' + this.realIndex]);
-
+                    heroDec.classList.remove('active');
+                    heroDec.style.backgroundPosition = 'calc(50% + 46px) calc(50% - 20px)';
                     heroTextSlider.slideTo(this.realIndex);
                     heroDec.style.backgroundImage =  'url(' + heroDec.dataset['img' + this.realIndex] + ')';
+                    setTimeout(function() {
+
+                        heroDec.classList.add('active');
+
+                    }, 10);
 
                 },
             }

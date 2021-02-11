@@ -30,7 +30,7 @@
         background-attachment: fixed
         background-repeat: no-repeat
         background-size: cover
-        background-position: calc(50% - 40px) calc(50% + 60px) 
+        background-position: calc(50% + 46px) calc(50% - 20px)
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
         pointer-events: none
@@ -39,6 +39,12 @@
         z-index: 1
         width: 100%
         transition: .6s background-image
+        animation-duration: 1s
+        animation-iteration-count: 1
+        animation-delay: .5s
+        animation-fill-mode: forwards
+    &-dec.active
+        animation-name: text
     &-slider
         height: 100%
         &__wrapper
