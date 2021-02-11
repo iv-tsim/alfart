@@ -148,7 +148,27 @@ textarea, input
         svg
             fill: #ffffff
 
+.circle
+    width: 1500px
+    height: 1500px
+    border-radius: 100%
+    border: 1px solid rgba(255, 255, 255, .3)
+    animation: circle linear infinite 30s
+    position: absolute
+    z-index: 0
 
+    
+@keyframes circle
+    0%
+        transform: rotate(0deg) translateX(150px)
+    100%
+        transform: rotate(-360deg) translateX(150px) scale(1)
+
+@keyframes circle2
+    0%
+        transform: rotate(0deg) translateX(250px)
+    100%
+        transform: rotate(360deg) translateX(250px)
 
 // Файлы, относящиеся ко всем страницам
 
@@ -227,6 +247,7 @@ textarea, input
 // Файлы, относящиеся к типовой странице
 
 @import ./page/_page.sass
+
 
 .alertify-notifier .ajs-message.ajs-warning
     background: white

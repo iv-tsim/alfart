@@ -111,15 +111,19 @@
 
         });
 
+        const heroDec = document.querySelector('.hero-dec');
+
         let heroSlider = new Swiper('.hero-slider', {
 
             speed: 600,
+            autoplay: 2000,
             spaceBetween: 40,
             slidesPerView: 1,
             slidesPerGroup: 1,
             observer: true,
             observeParents: true,
             touchEventsTarget: 'wrapper',
+            effect: 'fade',
             navigation: {
                 prevEl: '.slider-arrow.slider-arrow__prev.hero-arrow',
                 nextEl: '.slider-arrow.slider-arrow__next.hero-arrow'
@@ -135,7 +139,12 @@
             },
             on: {
                 slideChange() {
+
+                    console.log(heroDec.dataset['img' + this.realIndex]);
+
                     heroTextSlider.slideTo(this.realIndex);
+                    heroDec.style.backgroundImage =  'url(' + heroDec.dataset['img' + this.realIndex] + ')';
+
                 },
             }
         });

@@ -213,6 +213,61 @@ textarea, input {
   fill: #ffffff;
 }
 
+.circle {
+  width: 1500px;
+  height: 1500px;
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-animation: circle linear infinite 30s;
+          animation: circle linear infinite 30s;
+  position: absolute;
+  z-index: 0;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(150px);
+            transform: rotate(0deg) translateX(150px);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg) translateX(150px) scale(1);
+            transform: rotate(-360deg) translateX(150px) scale(1);
+  }
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(150px);
+            transform: rotate(0deg) translateX(150px);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg) translateX(150px) scale(1);
+            transform: rotate(-360deg) translateX(150px) scale(1);
+  }
+}
+
+@-webkit-keyframes circle2 {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(250px);
+            transform: rotate(0deg) translateX(250px);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateX(250px);
+            transform: rotate(360deg) translateX(250px);
+  }
+}
+
+@keyframes circle2 {
+  0% {
+    -webkit-transform: rotate(0deg) translateX(250px);
+            transform: rotate(0deg) translateX(250px);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) translateX(250px);
+            transform: rotate(360deg) translateX(250px);
+  }
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1049,6 +1104,8 @@ textarea, input {
 
 .hero-text, .hero-slider__wrapper {
   width: 50%;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text {
@@ -1075,17 +1132,20 @@ textarea, input {
   font-weight: 900;
   font-size: 440px;
   text-transform: uppercase;
+  text-align: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: calc(50% - 40px) calc(50% + 60px);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
   position: absolute;
   bottom: -20px;
   z-index: 1;
   width: 100%;
-  text-align: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  pointer-events: none;
+  -webkit-transition: .6s background-image;
+  transition: .6s background-image;
 }
 
 .hero-slider {
@@ -1108,7 +1168,7 @@ textarea, input {
 .hero-slider__bottom {
   position: absolute;
   left: -20px;
-  top: 190px;
+  top: 180px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1162,6 +1222,23 @@ textarea, input {
 
 .hero-slider__bottom .slider-arrows .slider-arrow.swiper-button-disabled svg {
   fill: rgba(255, 255, 255, 0.3);
+}
+
+.hero-circle {
+  width: 900px;
+  height: 900px;
+}
+
+.hero-circle_1 {
+  left: 130px;
+  top: -100px;
+  -webkit-animation-name: circle2;
+          animation-name: circle2;
+}
+
+.hero-circle_2 {
+  top: 30px;
+  left: -450px;
 }
 
 .advantages {
