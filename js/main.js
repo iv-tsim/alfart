@@ -80,6 +80,21 @@
                         spaceBetween: 25,
                         slidesPerView: 4,
                         slidesPerGroup: 4,
+                    },
+                    960: {
+                        spaceBetween: 25,
+                        slidesPerView: 3,
+                        slidesPerGroup: 3,
+                    },
+                    650: {
+                        spaceBetween: 20,
+                        slidesPerView: 2,
+                        slidesPerGroup: 2,
+                    },
+                    0: {
+                        spaceBetween: 15,
+                        slidesPerView: 1,
+                        slidesPerGroup: 1
                     }
                 }
             });
@@ -523,11 +538,13 @@
 
             if (target.matches('.menu-close') || !target.closest('.menu-wrapper.active')) {
 
+                event.preventDefault();
+
                 destroyMenu();
 
             }
 
-            if (target.closest('.header-logo')) {
+            if (target.closest('.header-burger')) {
 
                 menu.classList.add('active');
 
