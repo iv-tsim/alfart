@@ -660,6 +660,22 @@ textarea, input {
   background-color: #00339B;
 }
 
+@media (max-width: 1450px) {
+  .item-main {
+    padding: 15px 25px 12px 25px;
+  }
+  .item-bottom {
+    padding-left: 25px;
+  }
+  .item-favourite, .item-cart {
+    height: 65px;
+    width: 65px;
+  }
+  .item-favourite svg, .item-cart svg {
+    width: 25px;
+  }
+}
+
 .slider-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1108,6 +1124,139 @@ textarea, input {
   }
 }
 
+.menu {
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  position: relative;
+}
+
+.menu-wrapper {
+  position: fixed;
+  height: 100%;
+  width: 400px;
+  right: -400px;
+  top: 0;
+  background-color: #00339B;
+  z-index: 10;
+  -webkit-transition: .5s right;
+  transition: .5s right;
+  overflow: hidden;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu-wrapper.active {
+  right: 0;
+}
+
+.menu-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #0044CF;
+}
+
+.menu-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu-text__text {
+  white-space: nowrap;
+  max-width: 280px;
+  overflow: hidden;
+}
+
+.menu-text__img {
+  margin-right: 20px;
+}
+
+.menu-text.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-close {
+  cursor: pointer;
+  width: 20px;
+}
+
+.menu-bottom {
+  padding: 20px;
+  border-top: 1px solid #0044CF;
+}
+
+.menu-phone {
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff;
+}
+
+.menu-item {
+  padding: 30px 20px;
+  overflow: auto;
+  position: absolute;
+  right: -400px;
+  top: 0;
+  -webkit-transition: .5s right;
+  transition: .5s right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  z-index: 15;
+  height: 100%;
+  width: 100%;
+  background-color: #00339B;
+}
+
+.menu-item.active {
+  right: 0;
+  z-index: 20;
+  position: relative;
+}
+
+.menu-link {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.menu-link:last-child {
+  margin-bottom: 10px;
+}
+
 .hero {
   background-color: #00339B;
   display: -webkit-box;
@@ -1118,6 +1267,7 @@ textarea, input {
 
 .hero-wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .hero-text, .hero-slider__wrapper {
@@ -1313,6 +1463,46 @@ textarea, input {
   font-weight: 700;
 }
 
+@media (max-width: 1200px) {
+  .advantages {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .advantages {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .advantages {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .advantages {
+    padding: 30px 0;
+  }
+  .advantages-item {
+    margin: 0 15px 20px 15px;
+  }
+}
+
+@media (max-width: 509px) {
+  .advantages-item {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .advantages-item__number {
+    margin-bottom: 7px;
+  }
+  .advantages-item__title {
+    margin-bottom: 10px;
+  }
+}
+
 .popular {
   padding-bottom: 145px;
 }
@@ -1376,6 +1566,31 @@ textarea, input {
 
 .popular-body.active {
   display: block;
+}
+
+@media (max-width: 1400px) {
+  .popular {
+    padding-bottom: 120px;
+  }
+  .popular-title {
+    margin-bottom: 70px;
+  }
+  .popular-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+  .popular-tabs {
+    margin-right: 0;
+  }
+  .popular-btn {
+    margin-bottom: 30px;
+  }
+  .popular-bottom {
+    margin-top: 70px;
+  }
 }
 
 .about {

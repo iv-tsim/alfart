@@ -1,0 +1,75 @@
+.menu
+    overflow: hidden
+    flex-grow: 1
+    position: relative
+    &-wrapper
+        position: fixed
+        height: 100%
+        width: 400px
+        right: -400px
+        top: 0
+        background-color: $smalt
+        z-index: 10
+        transition: .5s right
+        overflow: hidden
+        color: #ffffff
+        display: flex
+        flex-direction: column
+    &-wrapper.active
+        right: 0
+    &-top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 20px
+        border-bottom: 1px solid $scienceBlue
+    &-text
+        display: flex
+        align-items: center
+        cursor: pointer
+        opacity: 0
+        visibility: hidden
+        &__text
+            white-space: nowrap
+            max-width: 280px
+            overflow: hidden
+        &__img
+            margin-right: 20px
+    &-text.active
+        opacity: 1
+        visibility: visible
+    &-close
+        cursor: pointer
+        width: 20px
+    &-bottom
+        padding: 20px
+        border-top: 1px solid $scienceBlue
+    &-phone
+        font-weight: 900
+        font-size: 20px
+        color: #fff
+    &-item
+        padding: 30px 20px
+        overflow: auto
+        position: absolute
+        right: -400px
+        top: 0
+        transition: .5s right
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        flex-grow: 1
+        z-index: 15
+        height: 100%
+        width: 100%
+        background-color: $smalt
+    &-item.active
+        right: 0
+        z-index: 20
+        position: relative
+    &-link
+        font-size: 24px
+        color: #fff
+        margin-bottom: 30px
+        &:last-child
+            margin-bottom: 10px

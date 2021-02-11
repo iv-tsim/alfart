@@ -69,6 +69,18 @@
                                 '<div class="slider-count__dec"></div>' +
                                 '<div class="slider-count__total">' + addZero(total) + '</div>';
                     }
+                },
+                breakpoints: {
+                    1300: {
+                        spaceBetween: 40,
+                        slidesPerView: 4,
+                        slidesPerGroup: 4,
+                    },
+                    1270: {
+                        spaceBetween: 25,
+                        slidesPerView: 4,
+                        slidesPerGroup: 4,
+                    }
                 }
             });
 
@@ -321,6 +333,51 @@
 
         }
 
+        const menu = document.querySelector('.menu-wrapper');
+        const menuText = document.querySelector('.menu-text');
+        const menuTextContent = document.querySelector('.menu-text__text');
+        const menuItems = Array.from(document.querySelectorAll('.menu-item'));
+
+        let menuCurrent = 'main',
+            currentTarget,
+            menuHistory = [];
+
+        function returnMenuItem(items, compare) {
+
+            return items.find(function(item) {
+
+                return item.dataset.menu == compare;
+
+            });
+            
+        }
+
+        function destroyMenu() {
+
+            menu.classList.remove('active');
+            
+            menuHistory.forEach(function() {
+
+                menuHistory.shift();
+
+            });
+
+            console.log(menuHistory);
+
+            menuCurrent = 'main';
+            
+            menuItems.forEach(function(item) {
+
+                item.classList.remove('active');
+
+            });
+
+            returnMenuItem(menuItems, menuCurrent).classList.add('active');
+
+            menuText.classList.remove('active');
+
+        }
+
         document.addEventListener('click', function(event) {
 
             const { target } = event;
@@ -412,6 +469,70 @@
                     heart.classList.add('active');
 
                 }
+
+            }
+
+            //Меню
+
+            if (target.matches('.menu-link_clickable')) {
+
+                event.preventDefault();
+
+                
+                menuHistory.unshift({name: menuCurrent, text: target.textContent});
+                menuCurrent = target.dataset.menu;
+                
+
+                currentTarget = returnMenuItem(menuItems, menuCurrent);
+
+                menuItems.forEach(function(item) {
+
+                    item.classList.remove('active');
+
+                });
+
+                currentTarget.classList.add('active');
+
+                menuText.dataset.menu = menuHistory[0].name;
+                menuTextContent.textContent = menuHistory[0].text;
+                menuText.classList.add('active');
+
+            }
+
+            //Пойти назад в меню
+
+            if (target.closest('.menu-text.active')) {
+
+                currentTarget.classList.remove('active');
+
+                currentTarget = returnMenuItem(menuItems, menuHistory[0].name);
+
+                currentTarget.classList.add('active');
+                menuHistory.shift();
+
+                if (menuHistory.length != 0) {
+
+                    menuText.dataset.menu = menuHistory[0].name;
+                    menuTextContent.textContent = menuHistory[0].text;
+
+                } else {
+
+                    menuText.classList.remove('active');
+                    menuCurrent = 'main';
+
+                }
+
+            }
+
+            if (target.matches('.menu-close') || !target.closest('.menu-wrapper.active')) {
+
+                destroyMenu();
+
+            }
+
+            if (target.closest('.header-logo')) {
+
+                menu.classList.add('active');
 
             }
             
