@@ -355,14 +355,12 @@
         function destroyMenu() {
 
             menu.classList.remove('active');
-            
-            menuHistory.forEach(function() {
+
+            for (let i = 0; i < menuHistory.length; i++) {
 
                 menuHistory.shift();
 
-            });
-
-            console.log(menuHistory);
+            }
 
             menuCurrent = 'main';
             
@@ -478,10 +476,8 @@
 
                 event.preventDefault();
 
-                
                 menuHistory.unshift({name: menuCurrent, text: target.textContent});
                 menuCurrent = target.dataset.menu;
-                
 
                 currentTarget = returnMenuItem(menuItems, menuCurrent);
 
@@ -508,6 +504,7 @@
                 currentTarget = returnMenuItem(menuItems, menuHistory[0].name);
 
                 currentTarget.classList.add('active');
+                menuCurrent = menuHistory[0].name;
                 menuHistory.shift();
 
                 if (menuHistory.length != 0) {
