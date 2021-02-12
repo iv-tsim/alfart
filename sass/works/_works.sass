@@ -3,8 +3,6 @@
         &:nth-child(odd)
             .works-item
                 flex-direction: row-reverse
-        &:last-child
-            margin-bottom: 90px
     
 .works
     position: relative
@@ -17,9 +15,9 @@
         width: 100%
         height: 90%
         bottom: -14%
+        left: 0
         z-index: -1
     &-item
-        margin-bottom: 190px
         display: flex
         justify-content: space-between
         &__slider
@@ -56,3 +54,76 @@
         &__container
             display: flex
             justify-content: center
+
+@media (max-width: 1600px)
+    .works
+        &-item
+            &__text
+                &-title
+                    margin-bottom: 70px
+                &-text
+                    margin-bottom: 40px
+
+@media (max-width: 1400px)
+    .works
+        margin-bottom: 120px
+        &-item
+            &__text
+                flex-basis: 45%
+        &-more
+            margin-bottom: 120px
+
+@media (max-width: 1150px)
+    .wrapper
+        .works
+            &:nth-child(odd)
+                .works-item
+                    flex-direction: column
+    .works
+        background-color: #fff
+        padding: 30px 0
+        margin-bottom: 80px
+        &::before
+            display: none
+        &-item
+            flex-direction: column
+            margin-bottom: 0
+            &__slider
+                &-wrapper
+                    width: 70%
+                    margin: 0 auto
+                    margin-bottom: 30px
+            &__text
+                padding-top: 0
+                &-title
+                    margin-bottom: 50px
+                &-text
+                    margin-bottom: 30px
+        &-more
+            margin-bottom: 80px
+
+@media (max-width: 900px)
+    .works
+        margin-bottom: 50px
+        &-item
+            &__slider
+                &-wrapper
+                    width: 80%
+            &__text
+                &-title
+                    margin-bottom: 30px
+                &-text
+                    margin-bottom: 20px
+                    font-size: 18px
+        &-more
+            margin-bottom: 60px
+
+@media (max-width: 600px)
+    .works
+        margin-bottom: 30px
+        &-item
+            &__slider
+                &-wrapper
+                    width: 100%
+        &-more
+            margin-bottom: 50px
