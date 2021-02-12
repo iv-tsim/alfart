@@ -357,6 +357,8 @@
             currentTarget,
             menuHistory = [];
 
+        OverlayScrollbars(document.querySelectorAll('.menu-item'), {});
+
         function returnMenuItem(items, compare) {
 
             return items.find(function(item) {
@@ -695,7 +697,7 @@
                         slidesPerGroup: 2,
                     },
                     0: {
-                        spaceBetween: 0,
+                        spaceBetween: 15,
                         slidesPerView: 1,
                         slidesPerGroup: 1,
                     }
@@ -735,7 +737,7 @@
                         slidesPerGroup: 2,
                     },
                     0: {
-                        spaceBetween: 20,
+                        spaceBetween: 15,
                         slidesPerView: 1,
                         slidesPerGroup: 1,
                     }
