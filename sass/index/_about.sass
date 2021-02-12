@@ -17,3 +17,54 @@
         margin-bottom: 45px
     &-text
         margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+    &-img
+        display: none
+
+@media (max-width: 1630px)
+    .about
+        &-main
+            padding-left: 15px
+            padding-right: 100px
+            padding-top: 70px
+            padding-bottom: 100px
+
+@media (max-width: 1200px)
+    .about
+        padding-bottom: 120px
+        &-main
+            padding-right: 70px
+            padding-top: 50px
+            padding-bottom: 80px 
+
+@media (max-width: 1200px)
+    .about
+        padding-bottom: 0
+        background-image: none
+        display: block
+        &-title
+            margin-bottom: 35px
+        &-main
+            padding: 50px 15px
+        &-img
+            display: block
+            height: 220px
+            background-image: url(../img/index/about/bg.jpg)
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: cover
+
+@media (max-width: 800px)
+    .about
+        &-text
+            margin-bottom: 15px
+        &-title
+            margin-bottom: 25px
+        &-main
+            padding: 40px 15px
+
+@media (max-width: 600px)
+    .about
+        &-main
+            padding: 30px 15px
