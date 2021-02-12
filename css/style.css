@@ -1965,28 +1965,25 @@ textarea, input {
           animation-name: text;
 }
 
-.hero-slider {
-  height: 100%;
-}
-
-.hero-slider__wrapper {
-  position: relative;
-}
-
-.hero-slider__item {
+.hero-img {
+  position: absolute;
   background-repeat: no-repeat;
   background-position: center right;
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
-  width: 100%;
+  width: 50%;
+  right: 0;
+  top: 0;
   pointer-events: none;
+  -webkit-transition: .6s background-image;
+  transition: .6s background-image;
 }
 
 .hero-slider__bottom {
   position: absolute;
-  left: -20px;
-  top: 180px;
+  right: 0;
+  top: 190px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

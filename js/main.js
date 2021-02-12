@@ -126,7 +126,10 @@
 
         });
 
-        let heroTextSlider = new Swiper('.hero-text__slider', {
+        const heroDec = document.querySelector('.hero-dec');
+        const heroImg = document.querySelector('.hero-img')
+
+        let heroSlider = new Swiper('.hero-slider', {
 
             speed: 600,
             spaceBetween: 0,
@@ -134,29 +137,13 @@
             slidesPerGroup: 1,
             observer: true,
             observeParents: true,
-            touchEventsTarget: 'wrapper'
-
-        });
-
-        const heroDec = document.querySelector('.hero-dec');
-
-        let heroSlider = new Swiper('.hero-slider', {
-
-            speed: 600,
-            autoplay: 2000,
-            spaceBetween: 40,
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            observer: true,
-            observeParents: true,
             touchEventsTarget: 'wrapper',
-            effect: 'fade',
             navigation: {
                 prevEl: '.slider-arrow.slider-arrow__prev.hero-arrow',
                 nextEl: '.slider-arrow.slider-arrow__next.hero-arrow'
             },
             pagination: {
-                el: '.hero-slider__wrapper .slider-count',
+                el: '.hero-text .slider-count',
                 type: 'custom',
                 renderCustom: function (swiper, current, total) {
                     return '<div class="slider-count__current">' + addZero(current) + '</div>' +
@@ -173,9 +160,9 @@
                 slideChange() {
 
                     heroDec.classList.remove('active');
-                    heroDec.style.backgroundPosition = 'calc(50% + 46px) calc(50% - 20px)';
-                    heroTextSlider.slideTo(this.realIndex);
+                    heroDec.style.backgroundPosition = 'calc(50%) calc(50%)';
                     heroDec.style.backgroundImage =  'url(' + heroDec.dataset['img' + this.realIndex] + ')';
+                    heroImg.style.backgroundImage =  'url(' + heroImg.dataset['img' + this.realIndex] + ')';
                     setTimeout(function() {
 
                         heroDec.classList.add('active');
