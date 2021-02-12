@@ -17,16 +17,17 @@
         &-bottom
             display: flex
             margin-top: 30px
-        &-list
+        &-item.empty
+            display: none
+    .blog
+        .swiper-slide.blog-item
+            flex-basis: auto
+            margin: 0
+        .swiper-wrapper.blog-list
             flex-wrap: nowrap
             justify-content: flex-start
             width: 100%
             margin-left: 0
-        &-item
-            margin: 0
-            flex-basis: auto
-        &-item.empty
-            display: none
 
 @media (max-width: 1200px)
     .blog
