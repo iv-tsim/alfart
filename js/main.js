@@ -704,6 +704,46 @@
 
         }
 
+        if (windowHeight < 1250) {
+            
+            let blogSlider = new Swiper('.blog-list__wrapper', {
+
+                speed: 600,
+                spaceBetween: 40,
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                observer: true,
+                observeParents: true,
+                touchEventsTarget: 'wrapper',
+                navigation: {
+                    prevEl: '.slider-arrow.slider-arrow__prev.blog-arrow',
+                    nextEl: '.slider-arrow.slider-arrow__next.blog-arrow'
+                },
+                pagination: {
+                    el: '.slider-count',
+                    type: 'custom',
+                    renderCustom: function (swiper, current, total) {
+                        return '<div class="slider-count__current">' + addZero(current) + '</div>' +
+                                '<div class="slider-count__dec"></div>' +
+                                '<div class="slider-count__total">' + addZero(total) + '</div>';
+                    }
+                },
+                breakpoints: {
+                    800: {
+                        spaceBetween: 40,
+                        slidesPerView: 2,
+                        slidesPerGroup: 2,
+                    },
+                    0: {
+                        spaceBetween: 20,
+                        slidesPerView: 1,
+                        slidesPerGroup: 1,
+                    }
+                }
+            });
+
+        }
+
     });
 
 })();

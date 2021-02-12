@@ -197,6 +197,14 @@ textarea, input
 @media (max-width: 390px)
     textarea, input
         padding: 16px 20px
+
+@media (max-width: 350px)
+    .title
+        font-size: 28px
+        &_small
+            font-size: 24px
+        &_reallySmall
+            font-size: 18px
     
 @keyframes circle
     0%
@@ -228,6 +236,10 @@ textarea, input
 @import ./general/_modal.sass
 @import ./general/_menu.sass
 
+// Файлы, относящиеся к блогу
+
+@import ./blog/_blog.sass
+
 // Файлы, относящиеся к главной странице
 
 @import ./index/_hero.sass
@@ -247,15 +259,10 @@ textarea, input
 @import ./card/_specs.sass
 @import ./card/_components.sass
 
-// Файлы, относящиеся к блогу
-
-@import ./blog/_blog.sass
-
 // Файлы, относящиеся к карточке блога
 
 @import ./blogCard/_blogCard-slider.sass
 @import ./blogCard/_blogCard-diff.sass
-@import ./blogCard/_blogCard-articles.sass
 
 // Файлы, относящиеся к доставке
 
