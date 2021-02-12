@@ -137,6 +137,9 @@
             slidesPerView: 1,
             slidesPerGroup: 1,
             observer: true,
+            autoplay: {
+                delay: 3000
+            },
             observeParents: true,
             touchEventsTarget: 'wrapper',
             navigation: {

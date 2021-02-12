@@ -47,11 +47,16 @@
 
 @media (max-width: 600px)
     .slider
+        &-bottom
+            flex-direction: row-reverse
+            justify-content: flex-end
         &-count
-            margin-right: 30px
+            margin-right: 0
             &__dec
                 width: 30px
                 margin: 0 10px
+        &-arrows
+            margin-right: 30px
         &-arrow
             &__prev
                 margin-right: 20px
