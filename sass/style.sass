@@ -157,6 +157,11 @@ textarea, input
     position: absolute
     z-index: 0
 
+@media (max-width: 1400px)
+    .page
+        &-title
+            margin-bottom: 60px
+
 @media (max-width: 1200px)
     .title
         font-size: 36px
@@ -166,9 +171,6 @@ textarea, input
             font-size: 22px
     .logo
         padding: 22px 27px 29px 27px
-    .page
-        &-title
-            margin-bottom: 60px
 
 @media (max-width: 900px)
     .title
@@ -278,6 +280,7 @@ textarea, input
 
 @import ./blogCard/_blogCard-slider.sass
 @import ./blogCard/_blogCard-diff.sass
+@import ./blogCard/_blogCard-articles.sass
 
 // Файлы, относящиеся к доставке
 

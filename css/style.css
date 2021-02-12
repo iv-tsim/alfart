@@ -224,6 +224,12 @@ textarea, input {
   z-index: 0;
 }
 
+@media (max-width: 1400px) {
+  .page-title {
+    margin-bottom: 60px;
+  }
+}
+
 @media (max-width: 1200px) {
   .title {
     font-size: 36px;
@@ -236,9 +242,6 @@ textarea, input {
   }
   .logo {
     padding: 22px 27px 29px 27px;
-  }
-  .page-title {
-    margin-bottom: 60px;
   }
 }
 
@@ -3477,6 +3480,29 @@ textarea, input {
   margin-top: 40px;
 }
 
+@media (max-width: 1630px) {
+  .blogCard-slider {
+    padding: 0 15px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media (max-width: 1400px) {
+  .blogCard-slider {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .blogCard-slider {
+    margin-bottom: 50px;
+  }
+  .blogCard-slider__bottom {
+    margin-top: 30px;
+  }
+}
+
 .blogCard-diff {
   padding-bottom: 80px;
 }
@@ -3487,7 +3513,7 @@ textarea, input {
 }
 
 .blogCard-diff__container {
-  padding: 0 130px 0 130px;
+  padding: 0 130px;
 }
 
 .blogCard-diff__title {
@@ -3546,6 +3572,55 @@ textarea, input {
   display: block;
   counter-increment: section;
   content: counter(section) ".";
+}
+
+@media (max-width: 1630px) {
+  .blogCard-diff__container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .blogCard-diff {
+    padding-bottom: 60px;
+  }
+  .blogCard-diff__title {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .blogCard-diff {
+    padding-bottom: 50px;
+  }
+  .blogCard-diff__title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .blogCard-diff {
+    padding-bottom: 40px;
+  }
+  .blogCard-diff__main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blogCard-diff__item {
+    margin-bottom: 20px;
+  }
+  .blogCard-diff__item:last-child {
+    margin-bottom: 0;
+  }
+  .blogCard-diff__item-title {
+    margin-bottom: 20px;
+  }
+}
+
+.blogCard-articles {
+  padding-top: 0;
 }
 
 .delivery {
@@ -3973,6 +4048,61 @@ textarea, input {
 
 .work-info__text:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 1630px) {
+  .work-info__container {
+    padding: 80px 15px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .work-info {
+    margin-bottom: 70px;
+  }
+  .work-info__container {
+    padding: 60px 15px;
+  }
+  .work-info__title {
+    margin-bottom: 25px;
+  }
+  .work-info__text {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .work-info {
+    margin-bottom: 60px;
+  }
+  .work-info__container {
+    padding: 50px 15px;
+  }
+  .work-info__title {
+    margin-bottom: 25px;
+  }
+  .work-info__text {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .work-info__container {
+    padding: 40px 15px;
+  }
+  .work-info__title {
+    margin-bottom: 20px;
+  }
+  .work-info__text {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .work-info {
+    margin-bottom: 40px;
+  }
 }
 
 .work-another {
