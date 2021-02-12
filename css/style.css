@@ -1498,6 +1498,87 @@ textarea, input {
   display: none;
 }
 
+@media (max-width: 1200px) {
+  .pagination {
+    margin-top: 50px;
+    margin-bottom: 100px;
+  }
+  .pagination-main {
+    margin: 0 80px;
+  }
+  .pagination-item {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .pagination {
+    margin-top: 40px;
+    margin-bottom: 70px;
+    font-size: 18px;
+  }
+  .pagination-main {
+    margin: 0 50px;
+  }
+  .pagination-item {
+    margin: 0 12px;
+    padding-top: 16px;
+    padding-bottom: 33px;
+  }
+  .pagination-item::before {
+    width: 25px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 700px) {
+  .pagination {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .pagination-main {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .pagination-item {
+    padding-top: 12px;
+  }
+  .pagination-item::before {
+    width: 21px;
+    height: 55px;
+  }
+  .pagination-text {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .pagination {
+    font-size: 16px;
+  }
+  .pagination-main {
+    margin-bottom: 0;
+  }
+  .pagination-item {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .pagination-item {
+    margin: 0 8px;
+  }
+}
+
 .policy {
   background: #00339B;
   font-size: 16px;

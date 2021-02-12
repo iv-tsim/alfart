@@ -46,3 +46,58 @@
         visibility: visible
     &-item.notnumber::before
         display: none
+
+@media (max-width: 1200px)
+    .pagination
+        margin-top: 50px
+        margin-bottom: 100px
+        &-main
+            margin: 0 80px
+        &-item
+            margin: 0 20px
+
+@media (max-width: 1000px)
+    .pagination
+        margin-top: 40px
+        margin-bottom: 70px
+        font-size: 18px
+        &-main
+            margin: 0 50px
+        &-item
+            margin: 0 12px
+            padding-top: 16px
+            padding-bottom: 33px
+            &::before
+                width: 25px
+                height: 70px
+
+@media (max-width: 700px)
+    .pagination
+        flex-wrap: wrap
+        justify-content: center
+        &-main
+            flex-basis: 100%
+            order: -1
+            text-align: center
+            margin: 0
+            margin-bottom: 10px
+        &-item
+            padding-top: 12px
+            &::before
+                width: 21px
+                height: 55px
+        &-text
+            margin: 0 15px
+
+@media (max-width: 400px)
+    .pagination
+        font-size: 16px
+        &-main
+            margin-bottom: 0
+        &-item
+            margin: 0 10px
+
+@media (max-width: 350px)
+    .pagination
+        &-item
+            margin: 0 8px
