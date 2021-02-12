@@ -13,7 +13,7 @@
             margin-left: -20px
         &__item
             margin: 0 20px 40px 20px
-            flex-basis: 600px
+            flex-basis: 520px
             flex-grow: 1
             color: #000
             &-img
@@ -26,3 +26,46 @@
                     width: 100%
                     opacity: 0
                     visibility: hidden
+
+@media (max-width: 1200px)
+    .work
+        &-another
+            padding-bottom: 100px
+            &__top
+                margin-bottom: 45px
+            &__list
+                width: calc(100% + 30px)
+                margin-left: -15px
+            &__item
+                flex-basis: 400px
+                margin: 0 15px 30px 15px
+                &-img
+                    margin-bottom: 40px
+
+@media (max-width: 900px)
+    .work
+        &-another
+            padding-bottom: 70px
+            &__top
+                margin-bottom: 30px
+            &__item
+                flex-basis: 350px
+                &-img
+                    margin-bottom: 30px
+
+@media (max-width: 600px)
+    .work
+        &-another
+            padding-bottom: 50px
+
+@media (max-width: 500px)
+    .work
+        &-another
+            &__top
+                flex-direction: column
+                margin-bottom: 20px
+                &-title
+                    margin-bottom: 15px
+            &__item
+                &-img
+                    margin-bottom: 20px
