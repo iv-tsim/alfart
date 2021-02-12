@@ -1514,7 +1514,7 @@ textarea, input {
 @media (max-width: 1000px) {
   .pagination {
     margin-top: 40px;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     font-size: 18px;
   }
   .pagination-main {
@@ -1538,6 +1538,8 @@ textarea, input {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
   }
   .pagination-main {
     -ms-flex-preferred-size: 100%;
