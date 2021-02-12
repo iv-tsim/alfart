@@ -232,10 +232,10 @@ textarea, input {
 
 @media (max-width: 1200px) {
   .title {
-    font-size: 36px;
+    font-size: 34px;
   }
   .title_small {
-    font-size: 32px;
+    font-size: 30px;
   }
   .title_reallySmall {
     font-size: 22px;
@@ -247,10 +247,10 @@ textarea, input {
 
 @media (max-width: 900px) {
   .title {
-    font-size: 34px;
+    font-size: 32px;
   }
   .title_small {
-    font-size: 30px;
+    font-size: 28px;
   }
   .title_reallySmall {
     font-size: 22px;
@@ -274,10 +274,10 @@ textarea, input {
 
 @media (max-width: 600px) {
   .title {
-    font-size: 30px;
+    font-size: 28px;
   }
   .title_small {
-    font-size: 26px;
+    font-size: 24px;
   }
   .title_reallySmall {
     font-size: 20px;
@@ -4104,6 +4104,36 @@ textarea, input {
 
 .work-slider__bottom {
   margin-top: 50px;
+}
+
+@media (max-width: 1200px) {
+  .work-slider {
+    padding: 0 15px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    margin-bottom: 100px;
+  }
+  .work-slider__bottom {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .work-slider {
+    margin-bottom: 70px;
+  }
+  .work-slider__bottom {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .work-slider {
+    margin-bottom: 50px;
+  }
+  .work-slider__bottom {
+    margin-top: 25px;
+  }
 }
 
 .work-info {

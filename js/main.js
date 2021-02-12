@@ -248,7 +248,7 @@
         let workSlider = new Swiper('.work-slider', {
 
             speed: 600,
-            spaceBetween: 10,
+            spaceBetween: 15,
             slidesPerView: 2,
             slidesPerGroup: 2,
             observer: true,
@@ -266,6 +266,17 @@
                     return '<div class="slider-count__current">' + addZero(current) + '</div>' +
                             '<div class="slider-count__dec"></div>' +
                             '<div class="slider-count__total">' + addZero(total) + '</div>';
+                }
+            },
+            breakpoints: {
+                600: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                },
+                0: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    loop: false
                 }
             }
 
