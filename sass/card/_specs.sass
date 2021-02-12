@@ -11,5 +11,35 @@
             border-top: none
         &__name
             flex-grow: 1
+            margin-right: 20px
         &__value
             min-width: 175px
+
+@media (max-width: 1300px)
+    .specs
+        padding-bottom: 100px
+
+@media (max-width: 900px)
+    .specs
+        padding-bottom: 70px
+        &-title
+            margin-bottom: 40px
+
+@media (max-width: 700px)
+    .specs
+        padding-bottom: 50px
+        &-item
+            font-size: 15px
+        &-title
+            margin-bottom: 30px
+
+@media (max-width: 600px)
+    .specs
+        padding-bottom: 30px
+        &-title
+            margin-bottom: 20px
+        &-item
+            flex-direction: column
+            padding: 8px 0
+            &__name
+                margin-bottom: 10px
