@@ -1978,6 +1978,7 @@ textarea, input {
   pointer-events: none;
   -webkit-transition: .6s background-image;
   transition: .6s background-image;
+  z-index: 1;
 }
 
 .hero-slider__bottom {
