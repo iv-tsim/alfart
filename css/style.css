@@ -255,6 +255,12 @@ textarea, input {
   .page-title {
     margin-bottom: 45px;
   }
+  .btn {
+    padding: 17px 45px;
+  }
+  .btn_blue {
+    padding: 22px 60px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -277,7 +283,7 @@ textarea, input {
     padding: 15px 40px;
   }
   .btn_blue {
-    padding: 20px 55px;
+    padding: 20px 50px;
   }
   textarea, input {
     padding: 16px 30px;
@@ -1544,9 +1550,6 @@ textarea, input {
   .pagination-main {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
     text-align: center;
     margin: 0;
     margin-bottom: 10px;
@@ -1559,6 +1562,9 @@ textarea, input {
     height: 55px;
   }
   .pagination-text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
     margin: 0 15px;
   }
 }
