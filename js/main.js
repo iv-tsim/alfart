@@ -128,7 +128,13 @@
 
         const heroDec = document.querySelector('.hero-dec');
         const heroImg = document.querySelector('.hero-img');
-        const heroSliderData = document.querySelector('.hero').dataset.images.split(', ');
+        let heroSliderData;
+
+        if (document.querySelector('.hero')) {
+
+            heroSliderData = document.querySelector('.hero').dataset.images.split(', ');
+
+        }
 
         let heroSlider = new Swiper('.hero-slider', {
 
@@ -540,6 +546,14 @@
             if (target.closest('.header-burger')) {
 
                 menu.classList.add('active');
+
+            }
+            
+            if (target.closest('.catalog-menu__mobile')) {
+
+                menu.classList.add('active');
+
+                // TODO: Тут обработчик каталога
 
             }
             

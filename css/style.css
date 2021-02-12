@@ -237,6 +237,9 @@ textarea, input {
   .logo {
     padding: 22px 27px 29px 27px;
   }
+  .page-title {
+    margin-bottom: 60px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -248,6 +251,9 @@ textarea, input {
   }
   .title_reallySmall {
     font-size: 22px;
+  }
+  .page-title {
+    margin-bottom: 45px;
   }
 }
 
@@ -276,6 +282,9 @@ textarea, input {
   textarea, input {
     padding: 16px 30px;
     font-size: 18px;
+  }
+  .page-title {
+    margin-bottom: 30px;
   }
 }
 
@@ -1331,7 +1340,7 @@ textarea, input {
     margin-right: 0;
   }
   .app-btn {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1382,6 +1391,32 @@ textarea, input {
 
 .breadcrumbs-item.inactive {
   color: #949494;
+}
+
+@media (max-width: 1200px) {
+  .breadcrumbs {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .breadcrumbs-item {
+    font-size: 15px;
+  }
+  .breadcrumbs-item__dec {
+    width: 50px;
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .breadcrumbs {
+    padding: 20px 0;
+  }
+  .breadcrumbs-item__dec {
+    width: 30px;
+    margin: 0 10px;
+  }
 }
 
 .pagination {
@@ -2752,8 +2787,8 @@ textarea, input {
 
 .catalog-list__item {
   margin: 0 20px 40px 20px;
-  -ms-flex-preferred-size: 370px;
-      flex-basis: 370px;
+  -ms-flex-preferred-size: 330px;
+      flex-basis: 330px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -2784,8 +2819,6 @@ textarea, input {
   border: 1px solid transparent;
   -webkit-transition: .3s border-color;
   transition: .3s border-color;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   color: #000;
 }
 
@@ -2799,6 +2832,47 @@ textarea, input {
 
 .catalog-menu__item.active {
   border-color: #FF7F00;
+}
+
+.catalog-menu__mobile {
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .catalog-menu {
+    margin-bottom: 50px;
+  }
+  .catalog-menu__item {
+    padding: 16px 25px;
+  }
+  .catalog-list {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+  }
+  .catalog-list__item {
+    -ms-flex-preferred-size: 310px;
+        flex-basis: 310px;
+    margin: 0 10px 20px 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .catalog-menu {
+    margin-bottom: 40px;
+  }
+  .catalog-menu__item {
+    display: none;
+  }
+  .catalog-menu__mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .catalog-menu {
+    margin-bottom: 30px;
+  }
 }
 
 .card-main__wrapper {

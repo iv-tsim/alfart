@@ -6,7 +6,7 @@
         margin-left: -20px
         &__item
             margin: 0 20px 40px 20px
-            flex-basis: 370px
+            flex-basis: 330px
             flex-grow: 1
     &-menu
         display: flex
@@ -23,7 +23,6 @@
             margin-bottom: 10px
             border: 1px solid transparent
             transition: .3s border-color
-            flex-wrap: wrap
             color: #000
             &:last-child
                 margin-right: 0
@@ -31,3 +30,33 @@
                 border-color: $flushOrange
         &__item.active
             border-color: $flushOrange
+        &__mobile
+            cursor: pointer
+            display: none
+
+@media (max-width: 1200px)
+    .catalog
+        &-menu
+            margin-bottom: 50px
+            &__item
+                padding: 16px 25px
+        &-list
+            width: calc(100% + 20px)
+            margin-left: -10px
+            &__item
+                flex-basis: 310px
+                margin: 0 10px 20px 10px
+                
+@media (max-width: 900px)
+    .catalog
+        &-menu
+            margin-bottom: 40px
+            &__item
+                display: none
+            &__mobile
+                display: block
+
+@media (max-width: 600px)
+    .catalog
+        &-menu
+            margin-bottom: 30px
