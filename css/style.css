@@ -2298,62 +2298,6 @@ textarea, input {
   margin-bottom: 80px;
 }
 
-.blog-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: calc(100% + 90px);
-  margin-left: -45px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.blog-item {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  margin: 0 45px 30px 45px;
-  -ms-flex-preferred-size: 470px;
-      flex-basis: 470px;
-  -webkit-transition: .3s background-color;
-  transition: .3s background-color;
-}
-
-.blog-item:hover {
-  background-color: #fff;
-}
-
-.blog-item__img {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.blog-item__img-inner {
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
-}
-
-.blog-item__date {
-  color: #FF7F00;
-  font-size: 20px;
-  margin-bottom: 25px;
-}
-
-.blog-item__title {
-  font-size: 24px;
-  font-weight: 700;
-  color: #000000;
-}
-
-.blog-item__body {
-  padding: 40px;
-}
-
 .innovation {
   background-color: #00339B;
   color: #ffffff;
@@ -2826,25 +2770,27 @@ textarea, input {
 }
 
 .blog-item {
-  -ms-flex-preferred-size: 420px;
-      flex-basis: 420px;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin: 0 20px 40px 20px;
+  -webkit-transition: .3s background-color;
+  transition: .3s background-color;
 }
 
-.blog-item:hover .blog-item__body {
+.blog-item:hover {
   background-color: #fff;
 }
 
-.blog-item__photo {
+.blog-item__img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
-.blog-item__photo-inner {
+.blog-item__img-inner {
   display: block;
   width: 100%;
   opacity: 0;
@@ -2853,15 +2799,10 @@ textarea, input {
 
 .blog-item__body {
   padding: 40px 35px 35px 35px;
-  background-color: transparent;
-  -webkit-transition: .3s background-color;
-  transition: .3s background-color;
   color: #000;
 }
 
 .blog-item__title {
-  font-weight: 700;
-  font-size: 24px;
   margin-bottom: 20px;
 }
 
@@ -2871,6 +2812,7 @@ textarea, input {
 
 .blog-item__date {
   color: #FF7F00;
+  font-size: 20px;
 }
 
 .blogCard-slider {

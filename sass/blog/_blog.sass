@@ -5,13 +5,13 @@
         width: calc(100% + 40px)
         margin-left: -20px
     &-item
-        flex-basis: 420px
+        flex-basis: 400px
         flex-grow: 1
         margin: 0 20px 40px 20px
+        transition: .3s background-color
         &:hover
-            .blog-item__body
-                background-color: #fff
-        &__photo
+            background-color: #fff
+        &__img
             background-repeat: no-repeat
             background-size: cover
             background-position: center center
@@ -22,14 +22,11 @@
                 visibility: hidden
         &__body
             padding: 40px 35px 35px 35px
-            background-color: transparent
-            transition: .3s background-color
             color: #000
         &__title
-            font-weight: 700
-            font-size: 24px
             margin-bottom: 20px
         &__text
             margin-bottom: 20px
         &__date
             color: $flushOrange
+            font-size: 20px
