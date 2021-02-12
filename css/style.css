@@ -446,7 +446,7 @@ textarea, input {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 
 .header-index .header-nav__item {
@@ -597,6 +597,7 @@ textarea, input {
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 15px;
+    padding-right: 15px;
   }
   .header-logo__img {
     width: 110px;
