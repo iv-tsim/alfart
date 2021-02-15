@@ -55,3 +55,63 @@
             font-size: 24px
             font-weight: 700
             color: #fff
+
+@media (max-width: 1630px)
+    .delivery
+        &-text
+            padding-right: 150px
+            padding-left: 15px
+        &-cards
+            padding-right: 15px
+
+@media (max-width: 1400px)
+    .delivery
+        &-text
+            padding-right: 100px
+        &-cards
+            padding-left: 70px
+            padding-top: 180px
+            padding-bottom: 100px
+        &-item
+            width: 250px
+            height: 250px
+            margin-right: 30px
+            &__text
+                font-size: 22px
+            &__img
+                max-width: 95px
+
+@media (max-width: 1200px)
+    .delivery
+        flex-direction: column
+        &-text, &-cards
+            flex-basis: auto
+        &-text
+            padding-right: 15px
+            padding-bottom: 40px
+        &-cards
+            background-color: $mercury
+            padding: 0 15px
+            padding-bottom: 50px
+            justify-content: center
+        
+@media (max-width: 559px)
+    .delivery
+        &-desc
+            font-size: 18px
+        &-text
+            padding-bottom: 30px
+        &-cards
+            flex-direction: column
+            align-items: center
+            padding-bottom: 40px
+        &-item
+            margin-right: 0
+            margin-bottom: 20px
+            width: 240px
+            height: auto
+            padding: 20px 18px 20px 18px
+            &__text
+                font-size: 20px
+            &__img
+                max-width: 90px
