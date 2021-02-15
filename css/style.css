@@ -3863,6 +3863,9 @@ textarea, input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .collab-main {
@@ -3899,6 +3902,59 @@ textarea, input {
   width: 100%;
   opacity: 0;
   visibility: hidden;
+}
+
+@media (max-width: 1500px) {
+  .collab {
+    padding-bottom: 120px;
+  }
+  .collab-main {
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .collab {
+    padding-bottom: 100px;
+  }
+  .collab-main {
+    padding-right: 70px;
+  }
+  .collab-text {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .collab {
+    padding-bottom: 90px;
+  }
+  .collab-img {
+    display: none;
+  }
+  .collab-main {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding-right: 0;
+  }
+  .collab-form {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .collab {
+    padding-bottom: 70px;
+  }
+  .collab-text {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .collab {
+    padding-bottom: 50px;
+  }
 }
 
 .wrapper .works:nth-child(odd) .works-item {
