@@ -2,18 +2,22 @@
     .usage
         &:last-child
             margin-bottom: 150px
-        &:nth-child(odd)
-            flex-direction: row-reverse
-            .usage
-                &-info
-                    padding-right: 0
-                    padding-left: 20px
-                    &__slider
-                        &-bottom
-                            justify-content: flex-end
-                &-main
-                    margin-right: 0
-                    margin-left: 40px
+
+@media (min-width: 1101px)
+    .wrapper
+        .usage
+            &:nth-child(odd)
+                flex-direction: row-reverse
+                .usage
+                    &-info
+                        padding-right: 0
+                        padding-left: 20px
+                        &__slider
+                            &-bottom
+                                justify-content: flex-end
+                    &-main
+                        margin-right: 0
+                        margin-left: 40px
     
 .usage
     display: flex
@@ -84,3 +88,109 @@
                     visibility: hidden
             &-bottom
                 margin-top: 50px
+
+@media (max-width: 1630px)
+    .usage
+        &-main
+            padding-left: 15px
+
+@media (max-width: 1400px)
+    .wrapper
+        .usage
+            &:last-child
+                margin-bottom: 130px
+    .usage
+        margin-bottom: 80px
+        &-main
+            padding-top: 60px
+            padding-bottom: 80px
+            padding-right: 70px
+            margin-right: 30px
+        &-info
+            padding-top: 60px
+            &__top
+                padding-left: 70px
+                margin-bottom: 70px
+
+@media (max-width: 1200px)
+    .wrapper
+        .usage
+            &:last-child
+                margin-bottom: 120px
+    .usage
+        margin-bottom: 70px
+        &-main
+            padding-top: 50px
+            padding-bottom: 60px
+            padding-right: 50px
+            margin-right: 30px
+        &-info
+            padding-top: 50px
+            &__top
+                padding-left: 60px
+                margin-bottom: 60px
+            &__slider
+                &-bottom
+                    margin-top: 40px
+
+@media (max-width: 1100px)
+    .wrapper
+        .usage
+            &:last-child
+                margin-bottom: 100px
+    .usage
+        flex-direction: column
+        margin-bottom: 60px
+        &-main
+            margin-right: 0
+            padding-top: 40px
+            padding-bottom: 40px
+            padding-right: 15px
+            &__top
+                margin-bottom: 25px
+            &__title
+                margin-bottom: 35px
+            &__text
+                margin-bottom: 15px
+        &-info
+            max-width: 100%
+            padding-left: 15px
+            padding-right: 15px
+            padding-bottom: 0
+            &__top
+                max-width: 100%
+                padding-left: 0
+                margin-bottom: 30px
+
+@media (max-width: 700px)
+    .wrapper
+        .usage
+            &:last-child
+                margin-bottom: 60px
+    .usage
+        margin-bottom: 40px
+        &-main
+            padding-top: 30px
+            padding-bottom: 30px
+            &__top
+                margin-bottom: 20px
+            &__title
+                margin-bottom: 30px
+        &-info
+            &__top
+                margin-bottom: 20px
+            &__slider
+                &-bottom
+                    margin-top: 30px
+
+@media (max-width: 500px)
+    .usage
+        &-main
+            &__title
+                margin-bottom: 20px
+
+@media (max-width: 400px)
+    .usage
+        &-main
+            &__text
+                font-size: 18px
