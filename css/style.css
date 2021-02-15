@@ -1773,7 +1773,7 @@ textarea, input {
 
 @media (max-width: 800px) {
   .modal {
-    padding: 80px 50px;
+    padding: 70px 50px;
   }
   .modal-title {
     margin-bottom: 30px;
