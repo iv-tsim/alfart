@@ -1265,6 +1265,12 @@ textarea, input {
 
 .app-policy__text a {
   color: #ffffff;
+  -webkit-transition: .3s color;
+  transition: .3s color;
+}
+
+.app-policy__text a:hover {
+  color: #00339B;
 }
 
 @media (max-width: 1300px) {
