@@ -5143,6 +5143,9 @@ textarea, input {
 }
 
 @media (max-width: 700px) {
+  .page {
+    padding-bottom: 60px;
+  }
   .page ul, .page ol {
     margin-top: 10px;
   }
@@ -5161,11 +5164,21 @@ textarea, input {
   .page table tr td {
     padding: 8px 20px;
   }
-  .page h1, .page h2, .page h3 {
+  .page h1 {
+    font-size: 34px;
     margin-top: 20px;
   }
-  .page h4 {
+  .page h2 {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+  .page h3 {
+    font-size: 20px;
     margin-top: 15px;
+  }
+  .page h4 {
+    font-size: 14px;
+    margin-top: 10px;
   }
 }
 
