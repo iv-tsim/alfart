@@ -274,10 +274,10 @@ textarea, input {
 
 @media (max-width: 600px) {
   .title {
-    font-size: 28px;
+    font-size: 26px;
   }
   .title_small {
-    font-size: 24px;
+    font-size: 22px;
   }
   .title_reallySmall {
     font-size: 20px;
@@ -4451,7 +4451,7 @@ textarea, input {
 
 @media (max-width: 900px) {
   .work-slider {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
   .work-slider__bottom {
     margin-top: 25px;
@@ -4530,7 +4530,7 @@ textarea, input {
 
 @media (max-width: 1000px) {
   .work-info__container {
-    padding: 40px 15px;
+    padding: 30px 15px;
   }
   .work-info__title {
     margin-bottom: 20px;
@@ -4642,6 +4642,9 @@ textarea, input {
 }
 
 @media (max-width: 500px) {
+  .work-another {
+    padding-bottom: 40px;
+  }
   .work-another__top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
