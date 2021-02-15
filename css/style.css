@@ -638,6 +638,7 @@ textarea, input {
 .footer-left {
   padding-top: 100px;
   padding-bottom: 120px;
+  padding-right: 15px;
   padding-left: calc((100% - 1600px) / 2);
   display: -webkit-box;
   display: -ms-flexbox;
