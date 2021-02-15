@@ -6,6 +6,8 @@
             align-items: center
             justify-content: space-between
             margin-bottom: 60px
+            &-title
+                margin-right: 15px
         &__list
             display: flex
             flex-wrap: wrap
@@ -26,6 +28,9 @@
                     width: 100%
                     opacity: 0
                     visibility: hidden
+        &__link
+            &-wrapper
+                display: none
 
 @media (max-width: 1200px)
     .work
@@ -63,10 +68,15 @@
         &-another
             padding-bottom: 40px
             &__top
-                flex-direction: column
                 margin-bottom: 20px
                 &-title
-                    margin-bottom: 15px
+                    margin-right: 0
+                &-btn
+                    display: none
+            &__link
+                &-wrapper
+                    display: block
+                    text-align: center
             &__item
                 &-img
                     margin-bottom: 20px
