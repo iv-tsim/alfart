@@ -1605,12 +1605,17 @@ textarea, input {
 
 .policy-wrapper.fancybox-content {
   padding: 25px;
+  background: #00339B;
+}
+
+.policy-wrapper.fancybox-content button.fancybox-close-small {
+  display: none;
 }
 
 .policy-title {
   font-weight: 700;
   font-size: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .policy-text {
@@ -1729,6 +1734,10 @@ textarea, input {
   cursor: pointer;
 }
 
+.modal-close__img {
+  width: 33.33%;
+}
+
 .modal-close_orange {
   background-color: #FF7F00;
 }
@@ -1759,6 +1768,10 @@ textarea, input {
   .modal-wrapper {
     max-width: 320px;
   }
+  .modal-close {
+    width: 50px;
+    height: 50px;
+  }
   .policy {
     font-size: 15px;
   }
@@ -1771,10 +1784,11 @@ textarea, input {
     padding-left: 15px;
   }
   .policy-list__item::before {
-    left: 9px;
+    left: 5px;
   }
   .policy-wrapper.fancybox-content {
     padding: 20px;
+    padding-top: 55px;
   }
 }
 
