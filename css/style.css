@@ -1764,13 +1764,47 @@ textarea, input {
   height: 600px;
 }
 
-@media (max-width: 600px) {
-  .modal-wrapper {
-    max-width: 320px;
+@media (max-width: 800px) {
+  .modal {
+    padding: 80px 50px;
   }
+  .modal-title {
+    margin-bottom: 30px;
+  }
+  .modal .btn_white {
+    margin-bottom: 30px;
+  }
+  .modal-name {
+    font-size: 15px;
+    padding-left: 30px;
+  }
+  .modal-map__content {
+    height: 500px;
+  }
+  .modal-map__wrapper {
+    height: 540px;
+  }
+}
+
+@media (max-width: 600px) {
   .modal-close {
     width: 50px;
     height: 50px;
+  }
+  .modal-policy {
+    margin-top: 20px;
+  }
+  .modal-input {
+    margin-bottom: 20px;
+  }
+  .modal-map {
+    padding: 15px;
+  }
+  .modal-map__content {
+    height: 400px;
+  }
+  .modal-map__wrapper {
+    height: 440px;
   }
   .policy {
     font-size: 15px;
@@ -1789,6 +1823,26 @@ textarea, input {
   .policy-wrapper.fancybox-content {
     padding: 20px;
     padding-top: 55px;
+  }
+}
+
+@media (max-width: 450px) {
+  .modal {
+    padding: 0 20px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  .modal-title {
+    margin-bottom: 25px;
+  }
+  .modal .btn_white {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .modal-policy__text {
+    font-size: 12px;
   }
 }
 
