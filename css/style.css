@@ -877,7 +877,7 @@ textarea, input {
         flex-basis: auto;
   }
   .footer-special {
-    padding: 15px 15px 20px 15px;
+    padding: 20px 15px 20px 15px;
   }
   .footer-nav {
     margin: 0 15px;
@@ -945,6 +945,7 @@ textarea, input {
 .item {
   -webkit-transition: .3s color;
   transition: .3s color;
+  color: #000;
 }
 
 .item-img {
@@ -1006,6 +1007,7 @@ textarea, input {
 .item-favourite, .item-cart {
   height: 75px;
   width: 75px;
+  cursor: pointer;
 }
 
 .item-favourite svg, .item-cart svg {
@@ -1088,6 +1090,10 @@ textarea, input {
           align-items: center;
   margin-right: 120px;
   width: auto;
+}
+
+.slider-count__current {
+  min-width: 20px;
 }
 
 .slider-count__dec {
@@ -1397,6 +1403,8 @@ textarea, input {
   position: relative;
   font-size: 16px;
   margin-bottom: 5px;
+  -webkit-transition: .3s color;
+  transition: .3s color;
 }
 
 .breadcrumbs-item__dec {
@@ -1404,6 +1412,10 @@ textarea, input {
   height: 1px;
   background-color: #949494;
   margin: 0 20px;
+}
+
+.breadcrumbs-item:hover {
+  color: #FF7F00;
 }
 
 .breadcrumbs-item.inactive {
@@ -1491,6 +1503,10 @@ textarea, input {
   -webkit-transition: .3s opacity, .3s visibility;
   transition: .3s opacity, .3s visibility;
   z-index: -1;
+}
+
+.pagination-item:hover {
+  color: #fff;
 }
 
 .pagination-item:hover::before {
@@ -2168,7 +2184,10 @@ textarea, input {
   background-size: cover;
   background-position: calc(50%) calc(50%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
   pointer-events: none;
   position: absolute;
   bottom: -20px;
@@ -3260,7 +3279,9 @@ textarea, input {
 }
 
 .card-quantity__number {
-  margin: 0 28px;
+  min-width: 20px;
+  margin: 0 20px;
+  text-align: center;
 }
 
 .card-quantity__img {
@@ -3360,6 +3381,13 @@ textarea, input {
   }
 }
 
+@media (max-width: 920px) {
+  .card-photos__item {
+    -ms-flex-preferred-size: 170px;
+        flex-basis: 170px;
+  }
+}
+
 @media (max-width: 800px) {
   .card-photos {
     margin-bottom: 30px;
@@ -3387,16 +3415,27 @@ textarea, input {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 750px) {
   .card-photos__item {
-    -ms-flex-preferred-size: 155px;
-        flex-basis: 155px;
+    -ms-flex-preferred-size: 250px;
+        flex-basis: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-photos__item {
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
   }
 }
 
 @media (max-width: 450px) {
   .card-photos {
     margin-bottom: 20px;
+  }
+  .card-photos__item {
+    -ms-flex-preferred-size: 135px;
+        flex-basis: 135px;
   }
   .card-btns {
     -webkit-box-orient: vertical;
@@ -3484,6 +3523,7 @@ textarea, input {
     padding: 8px 0;
   }
   .specs-item__name {
+    font-weight: 700;
     margin-bottom: 10px;
   }
 }
@@ -4092,13 +4132,18 @@ textarea, input {
     padding: 25px;
   }
   .dealer-item__title {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 22px;
   }
 }
 
 @media (max-width: 769px) {
   .dealer-item {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    padding: 0;
+  }
+  .dealer-item:hover {
+    background-color: transparent;
   }
 }
 
@@ -4995,6 +5040,10 @@ textarea, input {
   padding-bottom: 100px;
 }
 
+.page-table {
+  overflow: auto;
+}
+
 .page .b {
   font-weight: 700;
 }
@@ -5118,6 +5167,7 @@ textarea, input {
   font-size: 14px;
   margin-top: 20px;
   border-spacing: 0;
+  min-width: 700px;
 }
 
 .page table th {

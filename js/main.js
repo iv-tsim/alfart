@@ -1,3 +1,9 @@
+$(document).ready(function() {
+
+    $('input[type=tel]').mask("+7 (999) 999-99-99");
+
+});
+
 (function() {
     
     document.addEventListener('DOMContentLoaded', function() {
@@ -542,7 +548,7 @@
 
                     $('.card-info__main-hidden').slideDown();
 
-                    cardInfoBtn.textContent = 'Убрать';
+                    cardInfoBtn.textContent = 'Скрыть';
 
                 }
     
@@ -617,7 +623,7 @@
 
             }
 
-            if (target.matches('.menu-close') || !target.closest('.menu-wrapper.active')) {
+            if (target.matches('.menu-close') || (!target.closest('.menu-wrapper') && menu.classList.contains('active'))) {
 
                 event.preventDefault();
 
@@ -655,7 +661,7 @@
                 {
                     preset: 'islands#redIcon',
                     iconLayout: 'default#image',
-                    iconImageHref: '../img/general/mark.svg',
+                    iconImageHref: './img/general/mark.svg',
                     iconImageSize: [35, 35],
                     iconImageOffset: [-19, -52]
                 });
@@ -698,7 +704,7 @@
                 objectManager.objects.options
                     .set('preset', 'islands#redIcon')
                     .set('iconLayout', 'default#image')
-                    .set('iconImageHref', '../img/general/mark.svg')
+                    .set('iconImageHref', './img/general/mark.svg')
                     .set('iconImageSize', [23, 37])
                     .set('iconImageOffset'), [0, 0];
     
@@ -836,3 +842,4 @@
     });
 
 })();
+
