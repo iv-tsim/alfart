@@ -3985,6 +3985,60 @@ textarea, input {
   display: none;
 }
 
+@media (max-width: 1400px) {
+  .dealer {
+    padding-bottom: 100px;
+  }
+  .dealer-item {
+    padding: 40px 50px 50px 40px;
+  }
+  .dealer-item__title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .dealer {
+    padding-bottom: 80px;
+  }
+  .dealer-item {
+    padding: 30px 40px 40px 30px;
+  }
+  .dealer-item__title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .dealer {
+    padding-bottom: 60px;
+  }
+  .dealer-item {
+    padding: 25px;
+  }
+  .dealer-item__title {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 769px) {
+  .dealer-item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dealer {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .dealer {
+    padding-bottom: 30px;
+  }
+}
+
 .collab {
   padding-bottom: 140px;
 }
