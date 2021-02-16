@@ -177,7 +177,7 @@ $(document).ready(function() {
             slidesPerGroup: 1,
             observer: true,
             autoplay: {
-                delay: 3000
+                delay: 5000
             },
             observeParents: true,
             touchEventsTarget: 'wrapper',
