@@ -42,9 +42,11 @@
             margin-left: 0
         &:last-child
             margin-right: 0
-    &-item.active::before
-        opacity: 1
-        visibility: visible
+    &-item.active
+        color: #fff
+        &::before
+            opacity: 1
+            visibility: visible
     &-item.notnumber::before
         display: none
 

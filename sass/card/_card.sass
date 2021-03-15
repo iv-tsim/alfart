@@ -125,9 +125,17 @@
     &-price
         font-size: 20px
         margin-bottom: 50px
+        display: flex
+        align-items: flex-end
         &__number
             font-weight: 700
             font-size: 36px
+        &__old
+            font-size: 18px
+            text-decoration: line-through
+            margin-right: 15px
+        &__old, &__new
+            line-height: 70%
     &-btns
         display: flex
         &__item
@@ -204,6 +212,8 @@
             margin-bottom: 25px
         &-price
             margin-bottom: 25px
+            &__number
+                font-size: 30px
         &-main
             &__wrapper
                 padding-bottom: 50px
@@ -219,6 +229,9 @@
         &-photos
             &__item
                 flex-basis: 200px
+        &-price
+            &__number
+                font-size: 24px
 
 @media (max-width: 450px)
     .card
@@ -232,3 +245,12 @@
                 &:first-child
                     margin-right: 0
                     margin-bottom: 15px
+
+@media (max-width: 400px)
+    .card
+        &-price
+            flex-direction: column
+            align-items: flex-start
+            &__old
+                margin-right: 0
+                margin-bottom: 15px

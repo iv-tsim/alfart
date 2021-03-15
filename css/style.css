@@ -218,10 +218,21 @@ textarea, input {
   height: 1500px;
   border-radius: 100%;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  -webkit-animation: circle linear infinite 30s;
-          animation: circle linear infinite 30s;
+  -webkit-animation-name: circle;
+          animation-name: circle;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
   position: absolute;
   z-index: 0;
+}
+
+.circle_slow {
+  -webkit-animation-duration: 35s;
+          animation-duration: 35s;
 }
 
 @media (max-width: 1400px) {
@@ -324,8 +335,8 @@ textarea, input {
             transform: rotate(0deg) translateX(150px);
   }
   100% {
-    -webkit-transform: rotate(-360deg) translateX(150px) scale(1);
-            transform: rotate(-360deg) translateX(150px) scale(1);
+    -webkit-transform: rotate(-360deg) translateX(150px);
+            transform: rotate(-360deg) translateX(150px);
   }
 }
 
@@ -335,8 +346,8 @@ textarea, input {
             transform: rotate(0deg) translateX(150px);
   }
   100% {
-    -webkit-transform: rotate(-360deg) translateX(150px) scale(1);
-            transform: rotate(-360deg) translateX(150px) scale(1);
+    -webkit-transform: rotate(-360deg) translateX(150px);
+            transform: rotate(-360deg) translateX(150px);
   }
 }
 
@@ -997,11 +1008,24 @@ textarea, input {
 
 .item-price {
   margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .item-price span {
   font-size: 24px;
   font-weight: 700;
+}
+
+.item-price__old {
+  font-size: 14px;
+  text-decoration: line-through;
+  margin-bottom: 5px;
 }
 
 .item-favourite, .item-cart {
@@ -1124,6 +1148,12 @@ textarea, input {
 .slider-arrow svg {
   height: 16px;
   fill: #000000;
+  -webkit-transition: .3s fill;
+  transition: .3s fill;
+}
+
+.slider-arrow:hover svg {
+  fill: #FF7F00;
 }
 
 .slider-arrow__prev {
@@ -1520,6 +1550,10 @@ textarea, input {
 
 .pagination-item:last-child {
   margin-right: 0;
+}
+
+.pagination-item.active {
+  color: #fff;
 }
 
 .pagination-item.active::before {
@@ -2226,6 +2260,10 @@ textarea, input {
 
 .hero-slider__bottom .slider-arrows .slider-arrow svg {
   fill: #fff;
+}
+
+.hero-slider__bottom .slider-arrows .slider-arrow:hover svg {
+  fill: #FF7F00;
 }
 
 .hero-slider__bottom .slider-arrows .slider-arrow.swiper-button-disabled svg {
@@ -3299,11 +3337,27 @@ textarea, input {
 .card-price {
   font-size: 20px;
   margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .card-price__number {
   font-weight: 700;
   font-size: 36px;
+}
+
+.card-price__old {
+  font-size: 18px;
+  text-decoration: line-through;
+  margin-right: 15px;
+}
+
+.card-price__old, .card-price__new {
+  line-height: 70%;
 }
 
 .card-btns {
@@ -3418,6 +3472,9 @@ textarea, input {
   .card-price {
     margin-bottom: 25px;
   }
+  .card-price__number {
+    font-size: 30px;
+  }
   .card-main__wrapper {
     padding-bottom: 50px;
   }
@@ -3434,6 +3491,9 @@ textarea, input {
   .card-photos__item {
     -ms-flex-preferred-size: 200px;
         flex-basis: 200px;
+  }
+  .card-price__number {
+    font-size: 24px;
   }
 }
 
@@ -3452,6 +3512,22 @@ textarea, input {
             flex-direction: column;
   }
   .card-btns__item:first-child {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .card-price {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .card-price__old {
     margin-right: 0;
     margin-bottom: 15px;
   }

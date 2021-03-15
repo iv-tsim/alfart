@@ -153,9 +153,14 @@ textarea, input
     height: 1500px
     border-radius: 100%
     border: 1px solid rgba(255, 255, 255, .3)
-    animation: circle linear infinite 30s
+    animation-name: circle
+    animation-timing-function: linear
+    animation-iteration-count: infinite
+    animation-duration: 30s
     position: absolute
     z-index: 0
+    &_slow
+        animation-duration: 35s
 
 @media (max-width: 1400px)
     .page
@@ -227,7 +232,7 @@ textarea, input
     0%
         transform: rotate(0deg) translateX(150px)
     100%
-        transform: rotate(-360deg) translateX(150px) scale(1)
+        transform: rotate(-360deg) translateX(150px)
 
 @keyframes circle2
     0%
