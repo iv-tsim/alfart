@@ -688,6 +688,50 @@ $(document).ready(function() {
 
         });
 
+        function isScrolledIntoView(elements) {
+
+            return Array.from(elements).filter(function(item) {
+
+                let rect = item.getBoundingClientRect();
+                let elemTop = rect.top;
+                let elemBottom = rect.bottom;
+
+                if (elemTop < window.innerHeight && elemBottom >= 0) {
+
+                    return item;
+
+                }
+
+            });
+
+        }
+
+        const blogCards = document.querySelectorAll('.blog-item');
+
+        window.addEventListener('scroll', function() {
+
+            if (isScrolledIntoView(blogCards).length != 0) {
+
+                isScrolledIntoView(blogCards).forEach(function(item) {
+
+                    item.classList.add('active');
+                    
+
+                });
+
+            } else {
+
+                blogCards.forEach(function(item) {
+
+                    item.classList.remove('active');
+                    
+
+                });
+
+            }
+
+        });
+
         if (document.querySelector('div#map')) {
             ymaps.ready(function () {
                 var myMap = new ymaps.Map('map', {

@@ -2134,8 +2134,13 @@ textarea:-moz-placeholder, input:-moz-placeholder {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin: 0 20px 40px 20px;
-  -webkit-transition: .3s background-color;
-  transition: .3s background-color;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1), 0.3s background-color, -webkit-transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1), 0.3s background-color, -webkit-transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), 0.3s background-color;
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1), transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), 0.3s background-color, -webkit-transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .blog-item:hover {
@@ -2171,6 +2176,12 @@ textarea:-moz-placeholder, input:-moz-placeholder {
 .blog-item__date {
   color: #FF7F00;
   font-size: 20px;
+}
+
+.blog-item.active {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  opacity: 1;
 }
 
 @media (max-width: 1300px) {
