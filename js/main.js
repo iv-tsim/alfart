@@ -511,7 +511,7 @@ $(document).ready(function() {
 
             if (target.matches('.card-quantity__img')) {
 
-                let cardNumberData = +cardNumber.dataset.number;
+                let cardNumberData = +cardNumber.value;
 
                 if (target.classList.contains('card-quantity__minus')) {
 
@@ -527,8 +527,8 @@ $(document).ready(function() {
 
                 }
 
-                cardNumber.dataset.number = cardNumberData
-                cardNumber.textContent = cardNumberData;
+                cardNumber.value = cardNumberData;
+                cardNumber.dataset.number = cardNumber.value;
 
             }
 
@@ -645,6 +645,24 @@ $(document).ready(function() {
 
             }
             
+        });
+
+        document.addEventListener('input', function(event) {
+
+            const target = event.target;
+
+            if (target.matches('.card-quantity__number')) {
+
+                if (target.value == '' || target.value <= 0) {
+
+                    target.value = 1;
+
+                }
+
+                target.dataset.number = target.value;
+
+            }
+
         });
 
         if (document.querySelector('div#map')) {

@@ -116,6 +116,14 @@ textarea, input {
   font-family: 'Gilroy', sans-serif;
 }
 
+textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
+  font-family: 'Gilroy', sans-serif;
+}
+
+textarea:-moz-placeholder, input:-moz-placeholder {
+  font-family: 'Gilroy', sans-serif;
+}
+
 .logo {
   padding: 25px 32px 32px 32px;
   background-color: #fff;
@@ -3325,9 +3333,16 @@ textarea, input {
 }
 
 .card-quantity__number {
-  min-width: 20px;
-  margin: 0 20px;
+  width: 60px;
+  margin: 0 10px;
   text-align: center;
+  padding: 0 5px;
+}
+
+.card-quantity__number::-webkit-outer-spin-button, .card-quantity__number::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .card-quantity__img {
