@@ -51,6 +51,17 @@
         animation-timing-function: linear
     &-dec.active
         animation-name: text
+    &-dec.firefox
+        animation: none
+        background: none !important
+        -webkit-background-clip: unset
+        -moz-background-clip: unset
+        background-clip: unset
+        -webkit-text-fill-color: unset
+        -moz-text-fill-color: unset
+        text-fill-color: unset
+        color: #fff
+        background-attachment: unset
     &-slider
         &__bottom
             .slider-count

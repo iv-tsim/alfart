@@ -951,6 +951,9 @@ textarea:-moz-placeholder, input:-moz-placeholder {
     margin-right: 0;
     margin-bottom: 10px;
   }
+  .footer-policy {
+    text-align: left;
+  }
 }
 
 @media (max-width: 500px) {
@@ -2283,6 +2286,18 @@ textarea:-moz-placeholder, input:-moz-placeholder {
           animation-name: text;
 }
 
+.hero-dec.firefox {
+  -webkit-animation: none;
+          animation: none;
+  background: none !important;
+  background-clip: unset;
+  -webkit-text-fill-color: unset;
+  -moz-text-fill-color: unset;
+  text-fill-color: unset;
+  color: #fff;
+  background-attachment: unset;
+}
+
 .hero-slider__bottom .slider-count__dec {
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -2721,6 +2736,7 @@ textarea:-moz-placeholder, input:-moz-placeholder {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
