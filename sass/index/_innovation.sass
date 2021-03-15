@@ -2,6 +2,8 @@
     background-color: $smalt
     color: #ffffff
     padding: 90px 0 100px 0
+    position: relative
+    overflow: hidden
     &-container
         display: flex
     &-text, &-list
@@ -35,6 +37,12 @@
                 background-color: #fff
                 bottom: 0
                 left: 0
+    &-circle
+        bottom: 0
+        right: 0
+        animation-name: circle2
+        pointer-events: none
+        z-index: 0
 
 @media (max-width: 1400px)
     .innovation

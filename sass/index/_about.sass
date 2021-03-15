@@ -12,6 +12,8 @@
         padding-top: 90px
         flex-basis: 50%
         color: #ffffff
+        overflow: hidden
+        position: relative
     &-title
         margin-bottom: 45px
     &-text
@@ -20,6 +22,12 @@
             margin-bottom: 0
     &-img
         display: none
+    &-circle
+        top: -250px
+        left: 60px
+        pointer-events: none
+        z-index: 0
+
 
 @media (max-width: 1630px)
     .about

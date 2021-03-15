@@ -12,6 +12,8 @@
         display: flex
         flex-direction: column
         align-items: flex-start
+        position: relative
+        overflow: hidden
     &-logo
         margin-bottom: 110px
     &-phone
@@ -99,6 +101,11 @@
             transition: .3s color
             &:hover
                 color: $flushOrange
+    &-circle
+        left: 200px
+        bottom: -150px
+        z-index: 0
+        pointer-events: none
 
 @media (max-width: 1630px)
     .footer 
