@@ -47,6 +47,9 @@
         justify-content: space-between
         align-items: flex-start
         margin-right: 40px
+        transform: translate3d(0, 100%, 0)
+        opacity: 0
+        transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1),transform 1.5s cubic-bezier(0.19, 1, 0.22, 1)
         &:last-child
             margin-right: 0
         &__img
@@ -55,6 +58,9 @@
             font-size: 24px
             font-weight: 700
             color: #fff
+    &-item.active
+        opacity: 1
+        transform: translate3d(0, 0, 0)
 
 @media (max-width: 1630px)
     .delivery

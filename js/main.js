@@ -706,27 +706,51 @@ $(document).ready(function() {
 
         }
 
-        const blogCards = document.querySelectorAll('.blog-item');
+        function ActiveIfScrolledIntoView(items) {
 
-        window.addEventListener('scroll', function() {
+            if (isScrolledIntoView(items).length != 0) {
 
-            if (isScrolledIntoView(blogCards).length != 0) {
-
-                isScrolledIntoView(blogCards).forEach(function(item) {
+                isScrolledIntoView(items).forEach(function(item) {
 
                     item.classList.add('active');
-                    
 
                 });
 
             } else {
 
-                blogCards.forEach(function(item) {
+                items.forEach(function(item) {
 
                     item.classList.remove('active');
-                    
 
                 });
+
+            }
+
+        }
+
+        const blogCards = document.querySelectorAll('.blog-item');
+        const deliveryCards = document.querySelectorAll('.delivery-item');
+        const collabImg = document.querySelector('.collab-img');
+
+        ActiveIfScrolledIntoView(blogCards);
+        ActiveIfScrolledIntoView(deliveryCards);
+
+        document.addEventListener('scroll', function() {
+
+            ActiveIfScrolledIntoView(blogCards);
+            ActiveIfScrolledIntoView(deliveryCards);
+
+            let scale = 1 + window.pageYOffset / 4000;
+
+            if (scale > 1.3) {
+
+                scale = 1.3;
+
+            }
+
+            if (collabImg) {
+
+                collabImg.style.transform = 'scale(' + scale + ')';
 
             }
 

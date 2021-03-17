@@ -13,10 +13,13 @@
         transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1),transform 1.5s cubic-bezier(0.19, 1, 0.22, 1), .3s background-color
         &:hover
             background-color: #fff
+            .blog-item__img
+                background-size: 110% 110%
         &__img
             background-repeat: no-repeat
-            background-size: cover
+            background-size: 100% 100%
             background-position: center center
+            transition: .3s background-size
             &-inner
                 display: block
                 width: 100%
