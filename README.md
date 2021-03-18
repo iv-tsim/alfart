@@ -14,3 +14,6 @@
 - [usageCard.html](https://iv-tsim.ru/alfart/usageCard.html) - Карточка применения
 - [work.html](https://iv-tsim.ru/alfart/work.html) - Карточка работы
 - [works.html](https://iv-tsim.ru/alfart/works.html) - Наши работы
+- [cart_empty.html](https://iv-tsim.ru/alfart/cart_empty.html) - Пустая корзина
+- [favourite_empty.html](https://iv-tsim.ru/alfart/favourite_empty.html) - Пустая страница избранное
+- [favourite.html](https://iv-tsim.ru/alfart/favourite.html) - Страница избранное
