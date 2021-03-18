@@ -7,6 +7,7 @@
         background-size: cover
         background-position: center center
         background-repeat: no-repeat
+        display: block
         &__inner
             width: 100%
             opacity: 0
@@ -19,6 +20,8 @@
     &-title
         font-weight: 700
         margin-bottom: 15px
+        color: #000
+        transition: .3s color
     &-bottom
         background-color: $alto
         padding-left: 35px
@@ -55,6 +58,8 @@
         color: #ffffff
         .item-main, .item-bottom
             background-color: $smalt
+        .item-title
+            color: #fff
 
 @media (max-width: 1450px)
     .item

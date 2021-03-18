@@ -1003,6 +1003,7 @@ textarea:-moz-placeholder, input:-moz-placeholder {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  display: block;
 }
 
 .item-img__inner {
@@ -1022,6 +1023,9 @@ textarea:-moz-placeholder, input:-moz-placeholder {
 .item-title {
   font-weight: 700;
   margin-bottom: 15px;
+  color: #000;
+  -webkit-transition: .3s color;
+  transition: .3s color;
 }
 
 .item-bottom {
@@ -1096,6 +1100,10 @@ textarea:-moz-placeholder, input:-moz-placeholder {
 
 .item:hover .item-main, .item:hover .item-bottom {
   background-color: #00339B;
+}
+
+.item:hover .item-title {
+  color: #fff;
 }
 
 @media (max-width: 1450px) {
@@ -2320,6 +2328,7 @@ textarea:-moz-placeholder, input:-moz-placeholder {
   text-fill-color: unset;
   color: #fff;
   background-attachment: unset;
+  opacity: 0.8;
 }
 
 .hero-slider__bottom .slider-count__dec {
@@ -5447,6 +5456,28 @@ textarea:-moz-placeholder, input:-moz-placeholder {
     font-size: 14px;
     margin-top: 10px;
   }
+}
+
+.cartEmpty {
+  padding-bottom: 50px;
+}
+
+.cartEmpty-img {
+  fill: #FF7F00;
+  max-width: 80px;
+  margin-bottom: 20px;
+}
+
+.cartEmpty-text {
+  margin-bottom: 10px;
+}
+
+.cartEmpty-text:last-child {
+  margin-bottom: 0;
+}
+
+.cartEmpty-btn {
+  margin-top: 20px;
 }
 
 .alertify-notifier .ajs-message.ajs-warning {
